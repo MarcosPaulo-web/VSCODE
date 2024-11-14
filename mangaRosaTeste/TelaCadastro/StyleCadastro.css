@@ -1,0 +1,130 @@
+:root {
+
+    --primary-color: #ef7293;
+    --secondary-color: #fdf49e;
+    --text-color: #000;
+    --buttom-color: #8cd147;
+    --buttomShadow-color: #69bb17;
+    --buttom-voltar:#FF0000	;
+    --buttomShadow-voltar:#be0000	;
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-y: hidden;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+.divImagem img{
+    display: flex;
+    align-items: center;
+    margin-right: 400px;
+}
+
+.cadastro H1{
+
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.inputCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+.inputCadastro input{
+width: 370px;
+height: 30px;
+border: none;
+outline: none;
+border-radius: 10px;
+padding-left:5px ;
+}
+
+.inputCadastro input:focus{
+    box-shadow: 0 0 15px var(--secondary-color);
+}
+
+.cadastro .btnCadastrar{
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 30px;
+    width: 150px;
+    border-radius: 15px ;
+    margin-left: 0;
+    transition: 0.5s;
+    background-color: var(--buttom-color);
+    font-size: medium;
+    border: none;
+}
+
+.cadastro .btnCadastrar:hover{
+    background-color: var(--buttomShadow-color);
+}
+
+.cadastro .btnVoltar{
+    margin-top: 20px;
+    height: 30px;
+    width: 150px;
+    border-radius: 15px ;
+    margin-left: 0;
+    transition: 0.5s;
+    background-color: var(--buttom-voltar);
+    font-size: medium;
+    border: none;
+}
+
+.cadastro .btnVoltar:hover{
+    background-color: var(--buttomShadow-voltar);
+}
+
+@media screen and (max-width:1000px) {
+    
+    body{
+        overflow: scroll;
+    }
+
+
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .divImagem img{
+        display: flex;
+        align-items: center;
+        margin-left: 400px;
+        
+    }
+
+    .inputCadastro input{
+        width: 300px;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding-left:5px ;
+        }
+    
+    }

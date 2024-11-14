@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="StyleMenuPublicarPeca.css">
+    <title>Publicar Peca</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg " id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../MenuADM/MenuADM.html">
+                    <img src="../img/mangaRosa.png" alt="Manga Rosa" >
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="../MenuEstoque/MenuEstoque.html">Estoque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../MenuPublicarPeca/MenuPublciarPeca.html">Publicar Peça</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../SuporteAdm/SuporteAdm.html">Suporte</a>
+                        </li>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nome do Produto :</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group input-group-lg">
+            <span class="input-group-text" id="inputGroup-sizing-default">Valor do Produto :</span>
+            <input type="number" class="form-control" aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group input-group-lg">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">tipo de roupa</button>
+            <ul class="dropdown-menu">
+                <li><button class="dropdown-item" id="Roupa" >Roupa</button></li>
+                <li><button class="dropdown-item" id="Calcado" >Calçado</button></li>
+                <li><button class="dropdown-item" id="Acessorio" >Acessório</button></li>
+                
+            </ul>
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" id="tipoRoupa" readonly>
+        </div>
+
+        <button id="btnEnviar" class="btn btn-primary" onclick="publicarPeca()">Publicar</button>
+        </form>
+
+    </main>
+
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="../MenuPublicarPeca/MenuPublicar.js"></script>

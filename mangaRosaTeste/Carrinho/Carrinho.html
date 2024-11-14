@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StylesCarrinho.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../MenuCliente/MenuCliente.html"> <img src="../img/mangaRosa.png" alt="Logo"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="../LojaRoupa/MenuRoupa.html">Roupas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Calçados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Acessórios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Login/LoginIndex.html">Logar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Carrinho/Carrinho.html">🛒</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">🔍</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <div class="mobile-menu">
+                <input type="checkbox" class="menu-fakeTrigger">
+                <div class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul><!-- lista não ordenada-->
+                    <li class="nav-item-mobile"><a class="nav-link" href="../LojaRoupa/MenuRoupa.html">Roupas</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Calçados</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Acessórios</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">🔍</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Carrinho/Carrinho.html">🛒</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Logar</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="carrinho">
+            <h1> PRODUTOS NO CARRINHO :</h1>
+            <br><br>
+            <div id="compras"></div>
+        </div>
+        <div class="somaTotal">
+            <h1>Dado das Compras :</h1>
+            <br><br>
+            <div id="preco"></div>
+            <br>
+            <div id="total"></div>
+        </div>
+    </main>
+    <div class="buttons">
+        <button> comprar </button>
+    </div>
+</body>
+
+</html>
+
+<script src="CarrinhoScript.js"></script>

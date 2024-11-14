@@ -1,0 +1,151 @@
+/* Define variáveis de cores globais */
+:root {
+  --primary-color: #00aaff; /* Cor primária usada em elementos */
+  --background: #fff; /* Cor de fundo da página */
+  --text-nav: #ffffff; /* Cor do texto na barra de navegação */
+  --text-color: #ffffff; /* Cor do texto padrão */
+}
+
+/* Estilização global de fontes */
+* {
+  font-style: italic; /* Define todas as fontes como itálicas */
+  font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes padrão */
+}
+
+/* Estilo do corpo da página */
+body {
+  background-color: var(--background); /* Define a cor de fundo usando a variável */
+  overflow-y: auto; /* Permite rolagem vertical se necessário */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove padding padrão */
+}
+
+/* Estilo do cabeçalho */
+header {
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove padding */
+  position: fixed; /* Fixa o cabeçalho no topo da página */
+  top: 0; /* Posiciona no topo */
+  left: 0; /* Posiciona à esquerda */
+  width: 100%; /* Largura total da janela */
+  height: 60px; /* Altura do cabeçalho */
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+/* Estilo da barra de navegação */
+nav {
+    color: var(--text-color); /* Define a cor do texto */
+    background-color: var(--primary-color); /* Define a cor de fundo da barra de navegação */
+    color: var(--text-nav); /* Define a cor do texto na barra */
+    display: flex; /* Usa flexbox para alinhamento */
+    align-items: center; /* Alinha itens verticalmente ao centro */
+    padding: 0 20px; /* Padding horizontal */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de destaque */
+    height: 80px; /* Altura da barra de navegação */
+    transition: background 4s; /* Transição suave da cor de fundo */
+}
+
+/* Estilo da imagem na barra de navegação */
+nav img {
+  width: 150px; /* Largura da imagem */
+  height: 100%; /* Altura da imagem preenche totalmente */
+  background-color: var(--primary-color); /* Cor de fundo da imagem */
+}
+
+/* Estilo do texto em negrito dentro da navegação */
+nav b {
+ color: var(--text-color); /* Cor do texto em negrito */
+}
+
+/* Estilo do elemento principal da página */
+main {
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Alinha itens em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  padding-top: 80px; /* Espaço extra no topo para não cobrir o conteúdo */
+}
+
+/* Estilo do formulário */
+#form {
+  margin: 0 0 0 150px; /* Margens para posicionamento */
+  width: 400px; /* Largura do formulário */
+}
+
+/* Estilo do gráfico */
+#chart {
+  margin-top: 30px; /* Espaço acima para evitar sobreposição */
+  width: 80%; /* Largura do gráfico */
+  height: 100%; /* Altura total */
+  margin-left: 10%; /* Margem à esquerda */
+  background-color: #fff; /* Cor de fundo do gráfico */
+  padding: 2%; /* Espaçamento interno */
+  gap: 30px; /* Espaço entre itens filhos */
+  display: flex; /* Usa flexbox para layout */
+  justify-content: center; /* Centraliza itens horizontalmente */
+  align-items: center; /* Centraliza itens verticalmente */
+}
+
+/* Estilo da lista de drop */
+#drop {
+  overflow-y: scroll; /* Permite rolagem vertical */
+  max-height: 500px; /* Altura máxima */
+}
+
+/* Estilo do botão de drop */
+#btnDrop {
+  font-size: 1.2rem; /* Tamanho da fonte */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilo do relógio */
+#relogio {
+  font-size: 2.5rem; /* Tamanho da fonte do relógio */
+  letter-spacing: 2px; /* Espaçamento entre letras */
+  margin-right: 10px; /* Margem à direita */
+}
+
+/* Estilo do bairro selecionado */
+#bairro-selecionado {
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  text-align: center; /* Alinha texto ao centro */
+  margin-top: 50px; /* Espaço acima */
+}
+
+/* Estilo do título dentro do bairro selecionado */
+#bairro-selecionado h2 {
+  font-style: italic; /* Estilo itálico */
+}
+
+/* Estilo de imagens dentro do main */
+main img {
+  height: 100%; /* Altura total da imagem */
+  width: 100%; /* Largura total da imagem */
+  margin-top: 0%; /* Margem superior */
+}
+
+/* Estilo do gráfico radial */
+#chartRadial {
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+}
+
+/* Estilo do cabeçalho do card */
+.card-header {
+  border-bottom: #00aaff solid; /* Borda inferior com cor primária */
+}
+
+/* Estilo do histórico */
+#historico {
+  gap: 10px; /* Espaço entre itens */
+  margin-left: 15px; /* Margem à esquerda */
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilo do título */
+.titulo {
+    display: flex; /* Usa flexbox */
+    text-align: center; /* Alinha texto ao centro */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-bottom: 50px; /* Margem inferior */
+}

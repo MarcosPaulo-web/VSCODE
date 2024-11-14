@@ -1,0 +1,235 @@
+
+:root {
+    --primary-color: #fff;
+    --secundary-color: #7a1111;
+    --secundary-plus-dark: #660d0d;
+    --backgrond-form: #f9f9f9;
+    --text-color: #000;
+    --dourado: #B8860B;
+    --shadow:#464646;
+  }
+/* Contêiner para os cards, controlando a disposição */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+#navCima input{
+  border-color: var(--text-color);
+  }
+  #navCima input:focus {
+    border-color:var(--dourado) !important; /* Define a cor dourada para o contorno do input */
+    box-shadow: 0 0 0 0.25rem rgba(255, 223, 0, 0.25) !important;/* Adiciona uma sombra dourada ao redor */
+  }
+
+header{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 18vh;
+    overflow-y: hidden;
+  }
+  
+  nav{
+    background-color: var(--secundary-color) !important ;
+    font-size: 1.5rem;
+    z-index:1000 ;
+    position: absolute;   
+  }
+  
+  nav a{
+    color: var(--primary-color)!important;
+    margin-inline: 10px;
+  }
+  /* Navbar */
+  #navCima {
+    background-color: var(--primary-color)!important; /* Cor de fundo da navbar, altere conforme necessário */
+    padding: 10px 20px;
+  }
+  
+  .container-fluid {
+    display: flex;
+    justify-content: space-between; /* Alinha logo e perfil nas extremidades */
+    align-items: center; /* Alinha verticalmente todos os itens */
+  }
+  
+  #Logo img {
+    vertical-align: middle;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center; /* Alinha o input e o botão ao centro, se necessário */
+    align-items: center;
+    flex-direction: row;
+    height: 10px;
+  }
+  
+  .input-group input {
+  
+    flex-grow: 1; /* Faz o input ocupar o máximo de espaço disponível */
+  
+  }
+  
+  .input-group button{
+    background-color: var(--primary-color)!important;
+    border-color:  var(--dourado)!important;
+    color: var(--text-color);
+  }
+  
+  .input-group button:hover{
+    background-color: var(--dourado)!important;
+    box-shadow: 0 2px 2px var(--shadow)!important;
+  }
+  
+  #iconPerfil img {
+    vertical-align: middle; /* Garante o alinhamento correto do ícone do perfil */
+  }
+  
+  #iconPerfil{
+    color: var(--text-color)!important ;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    /* Ajusta a largura do campo de entrada e do botão para telas menores */
+    .input-group {
+      max-width: 200px; /* Ajuste a largura conforme necessário */
+    }
+  }
+  
+
+
+/* fim header */
+
+main{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.acao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-left: 7%;
+    max-width: 70%;
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilo dos cards individuais */
+.card {
+    background-color: #fff;
+    border-right: solid 2px;
+    border-bottom: solid 2px;
+    border-color: #636363a2;
+    padding: 10px;
+    padding-bottom: 0;
+    width: 200px;    
+    text-align: center;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+
+.card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-row {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.value {
+    font-size: 16px;
+    color: #000000;
+}
+
+
+.highlight-negative {
+    color: #e74c3c;
+}
+
+
+.highlight {
+    color: #2ecc71;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+
+#searchResults {
+  position: absolute;
+  top: 60px;
+  left: 150px;
+  right: 20px;
+  background-color: var(--primary-color); /* Cor de fundo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+  max-height: 300px;  /* Limita a altura da lista */
+  overflow-y: auto;  /* Permite rolagem */
+  z-index: 1001;  /* Garante que a lista fique acima de outros elementos */
+  border-radius: 8px;  /* Cantos arredondados */
+  margin-top: 10px;  /* Espaço entre o input e a lista */
+  display: block;  /* Inicialmente oculta */
+  max-width: 28%;
+  text-align: left;
+  font-size: 1.0rem;
+}
+
+#searchResults div {
+  border-top: solid #ddd 1px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  color: #000 !important; /* Garante que o texto seja preto */
+}
+
+#searchResults div:hover {
+  background-color: #f1f1f1;
+  color: #333 !important; /* Cor do texto ao passar o mouse */
+}
+
+#searchResults .list-group-item {
+  background-color: #fff; /* Cor de fundo de cada item */
+  color: #000 !important; /* Cor do texto preta */
+  border: none;
+  padding: 10px; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  cursor: pointer; /* Indica que o item é clicável */
+}
+
+#searchResults .list-group-item:hover {
+  background-color: #f0f0f0; /* Altera a cor do item ao passar o mouse */
+  color: #333 !important; /* Cor do texto ao passar o mouse */
+}

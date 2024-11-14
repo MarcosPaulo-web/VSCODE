@@ -1,0 +1,148 @@
+:root {
+
+    --primary-color: #ef7293;
+    --secondary-color: #fdf49e;
+    --text-color: #000;
+    --buttom-color: #8cd147;
+    --buttomShadow-color: #69bb17;
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-y: hidden;
+}
+
+main {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.divImagem {
+    display: flex;
+}
+
+.divImagem img {
+    margin-right: 400px;
+}
+
+
+
+.divForm {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.divForm h1 {
+
+    margin-bottom: 50px;
+    font-size: 7vh;
+    text-transform: uppercase;
+
+}
+
+.divForm .dados {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.divForm .dados input {
+
+    width: 350px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.divForm .dados .emailInput:focus {
+
+    box-shadow: 0 0 10px var(--secondary-color);
+
+}
+
+.divForm .dados .senhaInput:focus {
+
+    box-shadow: 0 0 15px var(--secondary-color);
+
+}
+
+.divForm .buttonLogar {
+
+    height: 30px;
+    width: 150px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 120px;
+    margin-top: 20px;
+    transition: 0.5s;
+    background-color: var(--buttom-color);
+    font-size: medium;
+}
+
+.divForm .buttonLogar:hover {
+
+    background-color: var(--buttomShadow-color);
+
+}
+
+.divForm .textParaCadastro {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+@media screen and (max-width:1000px) {
+
+    body {
+        overflow: scroll;
+    }
+
+
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        /* POR QUE O JUSTFI CONTENT CENTER BUGA ? */
+    }
+
+    .divImagem img {
+        display: flex;
+        justify-content: center;
+        margin-left: 400px;
+
+    }
+
+    .divForm .dados input {
+
+        width: 300px;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        padding-left: 5px;
+    }
+
+}

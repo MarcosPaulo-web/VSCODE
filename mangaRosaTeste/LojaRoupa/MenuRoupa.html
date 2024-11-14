@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StylesRoupa.css">
+    <title>Roupa</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="../MenuCliente/MenuCliente.html"> <img src="../img/mangaRosa.png" alt="Logo"></a>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a class="nav-link" href="../LojaRoupa/MenuRoupa.html">Roupas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Calçados</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Acessórios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Login/LoginIndex.html">Logar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Carrinho/Carrinho.html">🛒</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">🔍</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav>
+            <div class="mobile-menu">
+                <input type="checkbox" class="menu-fakeTrigger">
+                <div class="menu-lines">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul><!-- lista não ordenada-->
+                    <li class="nav-item-mobile"><a class="nav-link" href="../TelaCadastro/Cadastroindex.html">Roupas</a>
+                    </li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Calçados</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Acessórios</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">🔍</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Carrinho/Carrinho.html">🛒</a></li>
+                    <li class="nav-item-mobile"><a class="nav-link" href="">Logar</a></li>
+                </ul>
+        </nav>
+
+    </header>
+    <main class="container">
+        <div class="boxFiltro">
+            <div class="filtro">
+                <h1>Filtros
+                </h1>
+                <div class="itemFiltro">
+                    <label for="camisas">TODOS</label>
+                    <input type="radio" id="roupas" name="Roupas" checked="true">
+                </div>
+                <div class="itemFiltro">
+                    <label for="camisas">CAMISAS</label>
+                    <input type="radio" id="camisas" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="camisas">REGATAS</label>
+                    <input type="radio" id="regatas" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="calças">CALÇAS</label>
+                    <input type="radio" id="calças" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="bermuda">BERMUDAS</label>
+                    <input type="radio" id="bermuda" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="cueca">CUECA</label>
+                    <input type="radio" id="cueca" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="calcinha">CALCINHA</label>
+                    <input type="radio" id="calcinha" name="Roupas">
+                </div>
+                <div class="itemFiltro">
+                    <label for="meias">MEIAS</label>
+                    <input type="radio" id="meias" name="Roupas">
+                </div>
+                <br><br>
+                <h1> Preço </h1>
+                <div class="itemFiltro">
+                    <label for="crescente">CRESCENTE</label>
+                    <input type="radio" id="crescente" name="preco">
+                </div>
+                <div class="itemFiltro">
+                    <label for="decrescente">DECRESCENTE</label>
+                    <input type="radio" id="decrescente" name="preco">
+                </div>
+            </div>
+        </div>
+
+        <div class="popUp" id="popUp">
+        </div>
+
+        <div class="ListaProdutos">
+            <h1> Roupas </h1>
+            <div class="productList"></div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
+<script src="RoupasScript.js"></script>
