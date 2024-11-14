@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #fff;
+    --secundary-color: #7a1111;
+    --secundary-plus-dark: #660d0d;
+    --backgrond-form: #f9f9f9;
+    --text-color: #000;
+    --dourado: #B8860B;
+    --shadow: #464646;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 18vh;
+    overflow-y: hidden;
+}
+
+nav {
+    background-color: var(--secundary-color) !important;
+    font-size: 1.5rem;
+    z-index: 1000;
+    position: absolute;
+}
+
+nav a {
+    color: var(--primary-color) !important;
+    margin-inline: 10px;
+}
+
+/* Navbar */
+#navCima {
+    background-color: var(--primary-color) !important;
+    /* Cor de fundo da navbar, altere conforme necessário */
+    padding: 10px 20px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    /* Alinha logo e perfil nas extremidades */
+    align-items: center;
+    /* Alinha verticalmente todos os itens */
+}
+
+#Logo img {
+    vertical-align: middle;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    /* Alinha o input e o botão ao centro, se necessário */
+    align-items: center;
+    flex-direction: row;
+    height: 10px;
+}
+
+.input-group input {
+
+    flex-grow: 1;
+    /* Faz o input ocupar o máximo de espaço disponível */
+
+}
+
+.input-group button {
+    background-color: var(--primary-color) !important;
+    border-color: var(--dourado) !important;
+    color: var(--text-color);
+}
+
+.input-group button:hover {
+    background-color: var(--dourado) !important;
+    box-shadow: 0 2px 2px var(--shadow) !important;
+}
+
+#iconPerfil img {
+    vertical-align: middle;
+    /* Garante o alinhamento correto do ícone do perfil */
+}
+
+#iconPerfil {
+    color: var(--text-color) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+
+    /* Ajusta a largura do campo de entrada e do botão para telas menores */
+    .input-group {
+        max-width: 200px;
+        /* Ajuste a largura conforme necessário */
+    }
+}
+
+/* barra de pesquisa */
+#searchResults {
+    position: absolute;
+    top: 60px;
+    left: 150px;
+    right: 20px;
+    background-color: var(--primary-color);
+    /* Cor de fundo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    max-height: 300px;
+    /* Limita a altura da lista */
+    overflow-y: auto;
+    /* Permite rolagem */
+    z-index: 1001;
+    /* Garante que a lista fique acima de outros elementos */
+    border-radius: 8px;
+    /* Cantos arredondados */
+    margin-top: 10px;
+    /* Espaço entre o input e a lista */
+    display: block;
+    /* Inicialmente oculta */
+    max-width: 28%;
+    text-align: left;
+    font-size: 1.0rem;
+}
+
+#searchResults div {
+    border-top: solid #ddd 1px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    color: #000 !important;
+    /* Garante que o texto seja preto */
+}
+
+#searchResults div:hover {
+    background-color: #f1f1f1;
+    color: #333 !important;
+    /* Cor do texto ao passar o mouse */
+}
+
+#searchResults .list-group-item {
+    background-color: #fff;
+    /* Cor de fundo de cada item */
+    color: #000 !important;
+    /* Cor do texto preta */
+    border: none;
+    padding: 10px;
+    /* Espaçamento interno */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Indica que o item é clicável */
+}
+
+#searchResults .list-group-item:hover {
+    background-color: #f0f0f0;
+    /* Altera a cor do item ao passar o mouse */
+    color: #333 !important;
+    /* Cor do texto ao passar o mouse */
+}
+
+/* barra de pesquisa */
+
+/* main */
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.acoes  {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    margin-left: 10%;
+    border-bottom: solid 3px var(--dourado)!important ;
+    border-top: solid 3px var(--dourado)!important ;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.informacoes  {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    margin-left: 4%;
+    border-bottom: solid 3px var(--dourado)!important ;
+    padding-bottom: 30px;
+}
+
+.acoes .tipoAcao {
+    margin-top: 15px;
+    font-size: large;
+    
+}
+.informacoes .tipoDado {
+    margin-top: 15px;
+    font-size: large;
+    
+}
