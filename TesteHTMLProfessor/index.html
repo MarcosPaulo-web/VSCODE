@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front com Api</title>
+    <link rel="stylesheet" href="../TesteHTMLProfessor/style.css">
+   
+</head>
+<body>
+
+    <div class="container">
+        <h1>Api de Produto</h1>
+
+        <button id="getDataBtn">Consumir Dados  Metodo(GET)</button>
+        <input type="number" id="produtoId" placeholder="Digite o ID do produto, ou consulte todos apenas apertando no botão acima">        
+        <div class="input-group">
+            <label for="idProdutoDisplay">ID do Produto:</label>
+            <input type="text" id="idProdutoDisplay" readonly>
+        </div>
+        <div class="input-group">
+            <label for="nmProdutoDisplay">Nome do Produto:</label>
+            <input type="text" id="nmProdutoDisplay" readonly>
+        </div>
+        <div class="input-group">
+            <label for="vlProdutoDisplay">Valor do Produto:</label>
+            <input type="number" id="vlProdutoDisplay" readonly>
+        </div>
+        
+
+        <!-- Área para exibir os dados obtidos via Json-->
+        <textarea id="result" readonly></textarea>
+        <textarea id="resultConcatenated" readonly></textarea>
+
+        
+        <input type="text" id="nmProduto" placeholder="Nome do produto">
+        <input type="number" id="vlProduto" placeholder="Valor do Produto">
+        <button id="sendDataBtn">Enviar Dados Metodo(POST)</button>
+    </div>
+
+
+    <script src="../TesteHTMLProfessor/index.js"></script>
+
+</body>
+</html>

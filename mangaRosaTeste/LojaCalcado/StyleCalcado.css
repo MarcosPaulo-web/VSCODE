@@ -1,0 +1,211 @@
+:root {
+    --primary-color: #fff;
+    --secundary-color: #f3e032fb;
+    --text-color: #000000;
+    --shadow: #464646;
+    --cor-menu-icon: #232323;
+    --cor-button: rgb(0, 195, 255);
+    --cor-button-houver: rgb(0, 147, 192);
+    --navbar-hoverColor: #8a8989;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+#navbar {
+    font-size: 1.5rem;
+    background-color: var(--secundary-color);
+}
+
+#navbar img {
+    width: 50px;
+    height: 100%;
+}
+
+.navbar-nav {
+    gap: 10px;
+    background-color:var(--secundary-color);
+}
+
+/* main */
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.ListaProdutos {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.boxFiltro {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-right: 10%;
+}
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemFiltro {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.itemFiltro label {
+    margin-right: 10px;
+    width: 120px; /* Define uma largura fixa para todas as labels */
+}
+
+.container h1 {
+    margin-top: 9%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.productList {
+    display: flex; /* Alterado para flex */
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte */
+    gap: 25px; /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards na linha */
+}
+
+.product-card {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    min-width: 200px; /* Tamanho mínimo dos cards */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px var(--shadow);
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-card img {
+    width: 100%;
+}
+
+.product-card button {
+    height: 20px;
+    padding-inline: 10px;
+    background-color: var(--cor-button);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.product-card button:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 3px var(--cor-button-houver);
+}
+
+.itemFiltro {
+    border-bottom: groove 2px #000;
+    padding-bottom: 2px;
+}
+
+.popUp {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    background-color: var(--secundary-color);
+    transform: translate(-50%, -55%); /* Ajusta a posição para centralizar */
+    z-index: 1000; /* Aparece sobre outros elementos */
+}
+
+.product-card-popUp input {
+    width: 40px;
+}
+
+.product-card-popUp {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow);
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.product-card-popUp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px var(--shadow);
+}
+
+.product-card-popUp h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-card-popUp p {
+    margin-bottom: 8px;
+}
+
+.product-card-popUp img {
+    width: 100%;
+    max-height: 800px;
+}
+
+.product-card-popUp #btnFechar {
+    height: 30px;
+    background-color: rgb(240, 57, 57);
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding-inline: 10px;
+}
+
+.product-card-popUp #btnCarrinho {
+    height: 30px;
+    background-color: var(--cor-button);
+    border: none;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding-inline: 10px;
+}
+
+.product-card-popUp #btnCarrinho:hover {
+    box-shadow: 0 2px 4px var(--cor-button-houver);
+    cursor: pointer;
+}
+
+.product-card-popUp #btnFechar:hover {
+    box-shadow: 0 2px 4px rgb(238, 80, 80);
+    cursor: pointer;
+}
+
+.product-card-popUp:hover {
+    cursor: auto;
+}
