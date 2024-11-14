@@ -1,20 +1,24 @@
 
 :root {
-    --primary-color: #fff;
-    --secundary-color: #7a1111;
-    --secundary-plus-dark: #660d0d;
-    --backgrond-form: #f9f9f9;
-    --text-color: #000;
-    --dourado: #B8860B;
-    --shadow:#464646;
-  }
-/* Contêiner para os cards, controlando a disposição */
+  --primary-color: #fff;
+  --secundary-color: #7a1111;
+  --secundary-plus-dark: #660d0d;
+  --backgrond-form: #f9f9f9;
+  --text-color: #000;
+  --dourado: #B8860B;
+  --shadow:#464646;
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  font-family: 'Times New Roman', Times, serif;
+
 }
 
 /* header */
+
 #navCima input{
   border-color: var(--text-color);
   }
@@ -24,83 +28,80 @@
   }
 
 header{
-    display: flex;
-    flex-direction: column-reverse;
-    height: 18vh;
-    overflow-y: hidden;
-  }
-  
-  nav{
-    background-color: var(--secundary-color) !important ;
-    font-size: 1.5rem;
-    z-index:1000 ;
-    position: absolute;   
-  }
-  
-  nav a{
-    color: var(--primary-color)!important;
-    margin-inline: 10px;
-  }
-  /* Navbar */
-  #navCima {
-    background-color: var(--primary-color)!important; /* Cor de fundo da navbar, altere conforme necessário */
-    padding: 10px 20px;
-  }
-  
-  .container-fluid {
-    display: flex;
-    justify-content: space-between; /* Alinha logo e perfil nas extremidades */
-    align-items: center; /* Alinha verticalmente todos os itens */
-  }
-  
-  #Logo img {
-    vertical-align: middle;
-  }
-  
+  display: flex;
+  flex-direction: column-reverse;
+  height: 18vh;
+  overflow-y: auto;
+}
+
+nav{
+  background-color: var(--secundary-color) !important ;
+  font-size: 1.5rem;
+  z-index:1000 ;
+  position: absolute;   
+}
+
+nav a{
+  color: var(--primary-color)!important;
+  margin-inline: 10px;
+}
+/* Navbar */
+#navCima {
+  background-color: var(--primary-color)!important; /* Cor de fundo da navbar, altere conforme necessário */
+  padding: 10px 20px;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between; /* Alinha logo e perfil nas extremidades */
+  align-items: center; /* Alinha verticalmente todos os itens */
+}
+
+#Logo img {
+  vertical-align: middle;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center; /* Alinha o input e o botão ao centro, se necessário */
+  align-items: center;
+  flex-direction: row;
+  height: 10px;
+}
+
+.input-group input {
+
+  flex-grow: 1; /* Faz o input ocupar o máximo de espaço disponível */
+
+}
+
+.input-group button{
+  background-color: var(--primary-color)!important;
+  border-color:  var(--dourado)!important;
+  color: var(--text-color);
+}
+
+.input-group button:hover{
+  background-color: var(--dourado)!important;
+  box-shadow: 0 2px 2px var(--shadow)!important;
+}
+
+#iconPerfil img {
+  vertical-align: middle; /* Garante o alinhamento correto do ícone do perfil */
+}
+
+#iconPerfil{
+  color: var(--text-color)!important ;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  /* Ajusta a largura do campo de entrada e do botão para telas menores */
   .input-group {
-    display: flex;
-    justify-content: center; /* Alinha o input e o botão ao centro, se necessário */
-    align-items: center;
-    flex-direction: row;
-    height: 10px;
+    max-width: 200px; /* Ajuste a largura conforme necessário */
   }
-  
-  .input-group input {
-  
-    flex-grow: 1; /* Faz o input ocupar o máximo de espaço disponível */
-  
-  }
-  
-  .input-group button{
-    background-color: var(--primary-color)!important;
-    border-color:  var(--dourado)!important;
-    color: var(--text-color);
-  }
-  
-  .input-group button:hover{
-    background-color: var(--dourado)!important;
-    box-shadow: 0 2px 2px var(--shadow)!important;
-  }
-  
-  #iconPerfil img {
-    vertical-align: middle; /* Garante o alinhamento correto do ícone do perfil */
-  }
-  
-  #iconPerfil{
-    color: var(--text-color)!important ;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  @media (max-width: 768px) {
-    /* Ajusta a largura do campo de entrada e do botão para telas menores */
-    .input-group {
-      max-width: 200px; /* Ajuste a largura conforme necessário */
-    }
-  }
-  
-
-
+}
 /* fim header */
 
 main{
@@ -108,6 +109,7 @@ width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+font-family: 'Times New Roman', Times, serif;
 }
 
 .acao {
