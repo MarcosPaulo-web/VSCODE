@@ -52,7 +52,7 @@ function cadastrar() {
         const payload = {
             email: emailInput,
             senha: senhaInput,
-            telefone: parseInt(telInput, 10),
+            telefone: parseInt(telInput, 1),
 
         };
         console.log('Payload enviado:', payload); // Log do payload
