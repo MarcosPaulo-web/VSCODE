@@ -61,35 +61,35 @@ function displayDados(acaoGeral, tag) {
     dados.innerHTML = `
         <div class="cards-container">
             <div class="card">
-                <h2>Preço de Abertura</h2>
+                <h2><b>Preço de Abertura</b></h2>
                 <div class="info-row">
                     <span class="label">R$ ${acao.abertura}</span>  <!-- Exibe o preço de abertura -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>Preço de Fechamento</h2>
+                <h2><b>Preço de Fechamento</b></h2>
                 <div class="info-row">
                     <span class="label">R$ ${acao.fechamento}</span>  <!-- Exibe o preço de fechamento -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>Alta do Dia</h2>
+                <h2><b>Alta do Dia</b></h2>
                 <div class="info-row">
                     <span class="label">R$ ${acao.altaDia}</span>  <!-- Exibe a alta do dia -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>Baixa do Dia</h2>
+                <h2><b>Baixa do Dia</b></h2>
                 <div class="info-row">
                     <span class="label">R$ ${acao.baixaDia}</span>  <!-- Exibe a baixa do dia -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>Variação</h2>
+                <h2><b>Variação</b></h2>
                 <div class="info-row">
                     <span class="label">
                         <!-- Adiciona lógica para variação positiva ou negativa -->
@@ -101,21 +101,21 @@ function displayDados(acaoGeral, tag) {
             </div>
 
             <div class="card">
-                <h2>DY</h2>
+                <h2><b>DY</b></h2>
                 <div class="info-row">
                     <span class="label">${acao.dy}</span>  <!-- Exibe o DY -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>PVP</h2>
+                <h2><b>PVP</b></h2>
                 <div class="info-row">
                     <span class="label">${acao.pvp}</span>  <!-- Exibe o PVP -->
                 </div>
             </div>
 
             <div class="card">
-                <h2>Detalhes do Mercado</h2>
+                <h2><b>Detalhes do Mercado</b></h2>
                 <div class="info-row">
                     <span class="label">Volume: ${acao.volume}</span>  <!-- Exibe o volume do mercado -->
                 </div>
