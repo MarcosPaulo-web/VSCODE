@@ -10,8 +10,7 @@
   <title>Document</title>
 </head>
 
-<body>
-
+<body class="dark">
     <header>
         <nav class="navbar navbar-expand-md " id="navPrincipal">
             <div class="container-fluid">
@@ -29,9 +28,13 @@
                             <a class="nav-link" href="../TelaPrincipal/TelaPrincipal.html">Açoes</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ms-auto"> <!-- Adicionando ms-auto aqui -->
+                    <ul class="navbar-nav ms-auto"><!-- Adicionando ms-auto aqui -->
+                        <li>
+                            <button onclick="mudarTema()"><img id="imgTheme" src="../Img/ligthMode.png"
+                                    alt="themeMode"></button>
+                        </li>
                         <li class="nav-item" id="cadastro">
-                            <a class="nav-link" href="../TelaCadastro/Cadastro.html">Cadastre-se</a>
+                            <a class="nav-link active" href="../TelaCadastro/Cadastro.html">Cadastre-se</a>
                         </li>
                     </ul>
                 </div>

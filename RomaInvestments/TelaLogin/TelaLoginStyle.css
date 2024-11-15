@@ -5,7 +5,9 @@
   --backgrond-form: #f9f9f9;
   --text-color: #000;
   --dourado: #B8860B;
-  --shadow:#464646;
+  --shadow: #464646;
+  --text-color-nav:#fff;
+  --button-toogle :#000000;
 }
 
 * {
@@ -16,53 +18,102 @@
 
 }
 
+/* botão themeMode */
+
+body {
+ transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  --primary-color: #121212;
+  --text-color: #ffffff;
+  --backgrond-form: #464646; 
+  --text-color-nav:#fff; 
+  --icon-Perfil :#fff;
+  --button-toogle :var(--dourado);
+
+}
+body.light {
+  --primary-color: #fff;
+  --text-color: #000;
+  --backgrond-form: #f9f9f9;
+  --text-color-nav:#fff;
+  --icon-Perfil : #fff;
+  --button-toogle :transparent;
+
+
+
+}
+
+
+
+/* botão themeMode */
+
 /* header */
 
-#navCima input{
+#navCima input {
   border-color: var(--text-color);
-  }
-  #navCima input:focus {
-    border-color:var(--dourado) !important; /* Define a cor dourada para o contorno do input */
-    box-shadow: 0 0 0 0.25rem rgba(255, 223, 0, 0.25) !important;/* Adiciona uma sombra dourada ao redor */
-  }
+}
 
-header{
+#navCima input:focus {
+  border-color: var(--dourado) !important;
+  /* Define a cor dourada para o contorno do input */
+  box-shadow: 0 0 0 0.25rem rgba(255, 223, 0, 0.25) !important;
+  /* Adiciona uma sombra dourada ao redor */
+}
+
+header {
   display: flex;
   flex-direction: column-reverse;
   height: 18vh;
-  overflow-y: auto;
 }
 
-nav{
-  background-color: var(--secundary-color) !important ;
+nav {
+  background-color: var(--secundary-color) !important;
   font-size: 1.5rem;
-  z-index:1000 ;
-  position: absolute;   
+  z-index: 1000;
+  position: absolute;
 }
-
-nav a{
-  color: var(--primary-color)!important;
+nav button img{
+  max-width: 50px;
+  max-height: 50px ;
+}
+nav button{
+  background-color: transparent;
+  border: none;
+}
+nav a {
+  color: var(--text-color-nav) !important;
   margin-inline: 10px;
 }
+
 /* Navbar */
 #navCima {
-  background-color: var(--primary-color)!important; /* Cor de fundo da navbar, altere conforme necessário */
+  background-color: var(--primary-color) !important;
+  /* Cor de fundo da navbar, altere conforme necessário */
   padding: 10px 20px;
+
 }
 
 .container-fluid {
   display: flex;
-  justify-content: space-between; /* Alinha logo e perfil nas extremidades */
-  align-items: center; /* Alinha verticalmente todos os itens */
+  justify-content: space-between;
+  /* Alinha logo e perfil nas extremidades */
+  align-items: center;
+  /* Alinha verticalmente todos os itens */
 }
 
 #Logo img {
   vertical-align: middle;
 }
+ #navCima .navbar-toggler {
+background-color: var(--button-toogle);
+}
 
 .input-group {
   display: flex;
-  justify-content: center; /* Alinha o input e o botão ao centro, se necessário */
+  justify-content: center;
+  /* Alinha o input e o botão ao centro, se necessário */
   align-items: center;
   flex-direction: row;
   height: 10px;
@@ -70,38 +121,43 @@ nav a{
 
 .input-group input {
 
-  flex-grow: 1; /* Faz o input ocupar o máximo de espaço disponível */
+  flex-grow: 1;
+  /* Faz o input ocupar o máximo de espaço disponível */
 
 }
 
-.input-group button{
-  background-color: var(--primary-color)!important;
-  border-color:  var(--dourado)!important;
+.input-group button {
+  background-color: var(--primary-color) !important;
+  border-color: var(--dourado) !important;
   color: var(--text-color);
 }
 
-.input-group button:hover{
-  background-color: var(--dourado)!important;
-  box-shadow: 0 2px 2px var(--shadow)!important;
+.input-group button:hover {
+  background-color: var(--dourado) !important;
+  box-shadow: 0 2px 2px var(--shadow) !important;
 }
 
 #iconPerfil img {
-  vertical-align: middle; /* Garante o alinhamento correto do ícone do perfil */
+  vertical-align: middle;
+  background-color: var(--icon-Perfil);
+  border-radius: 100%;
+  /* Garante o alinhamento correto do ícone do perfil */
 }
 
-#iconPerfil{
-  color: var(--text-color)!important ;
+#iconPerfil {
+  color: var(--text-color) !important;
   display: flex;
   flex-direction: column;
 }
 
 @media (max-width: 768px) {
+
   /* Ajusta a largura do campo de entrada e do botão para telas menores */
   .input-group {
-    max-width: 200px; /* Ajuste a largura conforme necessário */
+    max-width: 200px;
+    /* Ajuste a largura conforme necessário */
   }
 }
-
 
 /* fim header */
 
