@@ -51,7 +51,7 @@ function cadastrar(){
             alert('Dados enviados com sucesso!');
             console.log('Resposta da API:', data);
             // Redirecionamento após sucesso (opcional)
-            window.location.href = "../TelaPrincipal/TelaPrincipal.html";  // Substitua pela URL da sua página principal
+            window.location.href = "../TelaPrincipal/TelaPrincipal.html"; 
         })
         .catch(error => {
             console.error('Erro:', error);
@@ -149,6 +149,7 @@ function buscarAcoes(){
 }
 
 function displaySearchResults(filteredAcoes) {
+ 
     if (filteredAcoes.length === 0) {
         searchResults.innerHTML = '<p>Nenhuma ação encontrada.</p>';
         searchResults.style.display = "absolute";
@@ -170,3 +171,21 @@ function displaySearchResults(filteredAcoes) {
 
 
 /* navbar fim */
+
+/* mudar tema */
+
+function mudarTema(){
+    const body = document.body;
+    const img = document.getElementById('imgTheme')
+    if (body.classList.contains('light')) {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        img.src = '../Img/darckMode.png'
+    } else {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        img.src = "../Img/ligthMode.png"
+    }
+}
+
+/* fim mudar tema */
