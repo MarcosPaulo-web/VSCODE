@@ -5,6 +5,17 @@ const searchResults = document.getElementById('searchResults');
 // Ouvinte de evento para garantir que o código só execute após o carregamento completo da página
 document.addEventListener('DOMContentLoaded', async () => {
     getTag();  // Chama a função para pegar a tag da URL
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const img = document.getElementById('imgTheme');
+    
+    if (savedTheme === 'dark') {
+        body.classList.add('dark');
+        img.src = '../Img/darckMode.png';
+    } else {
+        body.classList.add('light');
+        img.src = '../Img/ligthMode.png';
+    }
 });
 
 let acoes = [];
@@ -166,6 +177,7 @@ function displaySearchResults(filteredAcoes) {
 
 // fim barra de pesquisa
 
+
 function mudarTema(){
     const body = document.body;
     const img = document.getElementById('imgTheme')
@@ -173,9 +185,12 @@ function mudarTema(){
         body.classList.remove('light');
         body.classList.add('dark');
         img.src = '../Img/darckMode.png'
+        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
+
     } else {
         body.classList.remove('dark');
         body.classList.add('light');
         img.src = "../Img/ligthMode.png"
+        localStorage.setItem('theme','light')
     }
 }

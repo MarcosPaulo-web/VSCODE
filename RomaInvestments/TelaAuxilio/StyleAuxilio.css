@@ -139,8 +139,11 @@ background-color: var(--button-toogle);
 
 #iconPerfil img {
   vertical-align: middle;
-  background-color: var(--icon-Perfil);
+  width: 40px; 
+  height: 40px;
   border-radius: 100%;
+  border-width: medium;
+  border: solid black;
   /* Garante o alinhamento correto do ícone do perfil */
 }
 

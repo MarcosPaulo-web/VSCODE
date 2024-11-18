@@ -9,6 +9,8 @@
   --shadow: #464646;
   --text-color-nav:#fff;
   --button-toogle :#000000;
+  --text-title-card:#333;
+  --background-card-color:#494949;
 }
 
 * {
@@ -23,6 +25,7 @@
 
 body {
  transition: background-color 0.3s, color 0.3s;
+ background-color: var(--primary-color);
 }
 
 body.dark {
@@ -32,7 +35,8 @@ body.dark {
   --text-color-nav:#fff; 
   --icon-Perfil :#fff;
   --button-toogle :var(--dourado);
-
+  --text-title-card:#cdcdcd;
+  --background-card-color:#494949;
 }
 body.light {
   --primary-color: #fff;
@@ -41,8 +45,8 @@ body.light {
   --text-color-nav:#fff;
   --icon-Perfil : #fff;
   --button-toogle :transparent;
-
-
+  --text-title-card:#333;
+  --background-card-color:#fff;
 
 }
 
@@ -168,6 +172,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-family: 'Times New Roman', Times, serif;
+color: var(--text-color);
 }
 
 .acao {
@@ -189,7 +194,7 @@ font-family: 'Times New Roman', Times, serif;
 
 /* Estilo dos cards individuais */
 .card {
-    background-color: #fff;
+    background-color: var(--background-card-color);
     border-right: solid 2px;
     border-bottom: solid 2px;
     border-color: #636363a2;
@@ -204,7 +209,7 @@ font-family: 'Times New Roman', Times, serif;
 
 .card h2 {
     font-size: 18px;
-    color: #333;
+    color: var(--text-title-card);
     margin-bottom: 10px;
 }
 
@@ -217,13 +222,13 @@ font-family: 'Times New Roman', Times, serif;
 
 .label {
     font-weight: bold;
-    color: #000000;
+    color: var(--text-color);
 }
 
 
 .value {
     font-size: 16px;
-    color: #000000;
+    color: var(--text-color);
 }
 
 
