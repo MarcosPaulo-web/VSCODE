@@ -214,18 +214,17 @@ input {
 
 @media (max-width : 1000px) {
   form {
-    max-width: 50%
+      max-width: 50%
   }
 
-  #navCima {
+  #navCima{
     overflow-y: auto;
   }
 
-  #navPrincipal {
+  #navPrincipal{
     overflow-y: auto;
   }
 }
-
 /* fim main */
 
 /* barra de pesquisa */

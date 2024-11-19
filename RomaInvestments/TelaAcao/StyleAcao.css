@@ -254,6 +254,17 @@ color: var(--text-color);
 }
 
 
+@media (max-width : 1000px) {
+
+  #navCima{
+    overflow-y: auto;
+  }
+
+  #navPrincipal{
+    overflow-y: auto;
+  }
+}
+
 #searchResults {
   position: absolute;
   top: 60px;

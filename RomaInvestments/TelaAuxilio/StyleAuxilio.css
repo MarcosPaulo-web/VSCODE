@@ -278,3 +278,14 @@ main{
     font-size: large;
     
 }
+
+@media (max-width : 1000px) {
+
+  #navCima{
+    overflow-y: auto;
+  }
+
+  #navPrincipal{
+    overflow-y: auto;
+  }
+}

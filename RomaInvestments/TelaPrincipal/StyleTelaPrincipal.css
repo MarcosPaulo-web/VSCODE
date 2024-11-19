@@ -75,6 +75,7 @@ nav {
   font-size: 1.5rem;
   z-index: 1000;
   position: absolute;
+  overflow-y: hidden;
 }
 nav button img{
   max-width: 50px;
@@ -308,10 +309,14 @@ td {
   margin-top: 20px;
 }
 
-@media screen and (max-width:800px) {
-  .variacao {
-    display: flex;
-    flex-direction: column;
+@media (max-width : 1000px) {
+
+  #navCima{
+    overflow-y: auto;
+  }
+
+  #navPrincipal{
+    overflow-y: auto;
   }
 }
 

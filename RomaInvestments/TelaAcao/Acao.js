@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const img = document.getElementById('imgTheme');
-    
+
     if (savedTheme === 'dark') {
         body.classList.add('dark');
         img.src = '../Img/darckMode.png';
@@ -130,17 +130,22 @@ function displayDados(acaoGeral, tag) {
                 <div class="info-row">
                     <span class="label">Volume: ${acao.volume}</span>  <!-- Exibe o volume do mercado -->
                 </div>
+            </div>
+<div class="card">
+                <h2><b>Detalhes do Mercado</b></h2>
                 <div class="info-row">
-                    <span class="label">Mercado: R$ ${acao.valorMercado}</span>  <!-- Exibe o valor de mercado -->
+                    <span class="label">Mercado: ${acao.valorMercado}</span>  <!-- Exibe o volume do mercado -->
                 </div>
             </div>
+
+
         </div>
     `;
 }
 // barra de pesquisa
 function buscarAcoes() {
     const searchTerm = document.getElementById("search").value.toLowerCase(); // Captura o valor da pesquisa
-    
+
     if (searchTerm.length === 0) {
         // Se o campo de pesquisa estiver vazio, limpar os resultados
         searchResults.innerHTML = '';
@@ -178,7 +183,7 @@ function displaySearchResults(filteredAcoes) {
 // fim barra de pesquisa
 
 
-function mudarTema(){
+function mudarTema() {
     const body = document.body;
     const img = document.getElementById('imgTheme')
     if (body.classList.contains('light')) {
@@ -191,6 +196,6 @@ function mudarTema(){
         body.classList.remove('dark');
         body.classList.add('light');
         img.src = "../Img/ligthMode.png"
-        localStorage.setItem('theme','light')
+        localStorage.setItem('theme', 'light')
     }
 }
