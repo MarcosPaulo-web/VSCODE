@@ -322,7 +322,7 @@ td {
   top: 60px;
   left: 150px;
   right: 20px;
-  background-color: var(--primary-color); /* Cor de fundo */
+  background-color:#fff; /* Cor de fundo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
   max-height: 300px;  /* Limita a altura da lista */
   overflow-y: auto;  /* Permite rolagem */
@@ -350,7 +350,7 @@ td {
 
 #searchResults .list-group-item {
   background-color: #fff; /* Cor de fundo de cada item */
-  color: var(--text-color-nav) !important; /* Cor do texto preta */
+  color: #000 !important; /* Cor do texto preta */
   border: none;
   padding: 10px; /* Espaçamento interno */
   font-size: 14px; /* Tamanho da fonte */

@@ -22,6 +22,7 @@
 
 body {
  transition: background-color 0.3s, color 0.3s;
+ color: var(--text-color);
 }
 
 body.dark {
@@ -235,7 +236,7 @@ input {
   top: 60px;
   left: 150px;
   right: 20px;
-  background-color: var(--icon-Perfil);
+  background-color: #fff;
   /* Cor de fundo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   /* Sombra sutil */
@@ -261,7 +262,7 @@ input {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
-  color:var(--text-color) !important;
+  color:#000 !important;
   /* Garante que o texto seja preto */
 }
 

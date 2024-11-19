@@ -22,6 +22,7 @@
 
 body {
  transition: background-color 0.3s, color 0.3s;
+ color: var(--text-color);
 }
 
 body.dark {
@@ -164,7 +165,6 @@ background-color: var(--button-toogle);
 /* body  */
 body {
   background-color: var(--primary-color);
-  color: var(--text-color);
   overflow-y: auto;
 }
 
@@ -232,7 +232,7 @@ input{
   top: 60px;
   left: 150px;
   right: 20px;
-  background-color: var(--primary-color); /* Cor de fundo */
+  background-color: #fff; /* Cor de fundo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
   max-height: 300px;  /* Limita a altura da lista */
   overflow-y: auto;  /* Permite rolagem */
