@@ -4,61 +4,31 @@ const empresas = document.getElementById('empresas')
 const searchResults = document.getElementById('searchResults');
 
 document.addEventListener('DOMContentLoaded', async () => {
-
+    
     await getAcoes();
+    await carregarTema()
+
+
+})
+
+let acoes = [];
+function carregarTema(){
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const img = document.getElementById('imgTheme');
     
     if (savedTheme === 'dark') {
         body.classList.add('dark');
-        img.src = '../Img/darckMode.png';
+        img.src = '../Img/ligthMode.png';
+
     } else {
         body.classList.add('light');
-        img.src = '../Img/ligthMode.png';
-    }
+        img.src = '../Img/darckMode.png';
 
-})
-let acoes = [];
-
-/* barra de pesquisa */
-function buscarAcoes() {
-    const searchTerm = document.getElementById("search").value.toLowerCase(); // Captura o valor da pesquisa
-    
-    if (searchTerm.length === 0) {
-        // Se o campo de pesquisa estiver vazio, limpar os resultados
-        searchResults.innerHTML = '';
-        return;
-    }
-
-    // Filtra as ações com base no nome
-    const filteredAcoes = [...acoes].filter(acao => acao.nome.toLowerCase().includes(searchTerm));
-
-    // Exibe as ações filtradas na área de resultados
-    displaySearchResults(filteredAcoes);
-}
-
-// Função para exibir os resultados da pesquisa
-function displaySearchResults(filteredAcoes) {
-    if (filteredAcoes.length === 0) {
-        searchResults.innerHTML = '<p>Nenhuma ação encontrada.</p>';
-        searchResults.style.display = "absolute"
-        searchResults.style.textAlign = "center"
-
-    } else {
-        searchResults.style.display = "absolute"
-        searchResults.style.textAlign = "left"
-
-        searchResults.innerHTML = filteredAcoes.map(acao => `
-            <div class="list-group">
-                <a href="../TelaAcao/Acao.html?tag=${acao.tag}" class="list-group-item list-group-item-action">
-                    ${acao.nome} - ${acao.tag} - ${acao.preco} R$
-                </a>
-            </div>
-        `).join('');
     }
 }
-/* fim da barra de pesquisa */ 
+
+
 async function getAcoes() {
 
     try {
@@ -84,7 +54,7 @@ function displayTableAltas(acoes) {
 
     tableAlta.innerHTML = acoes.map(acao => `
             <tr>
-                <td><a href="../TelaAcao/Acao.html?tag=${acao.tag}">${acao.tag}</a></td>
+                <td><a href="../HTML/Acao.html?tag=${acao.tag}">${acao.tag}</a></td>
                 <td>${acao.nome}</td>
                 <td>${acao.variacao}%</td>
                 <td>${acao.preco} R$</td>
@@ -96,7 +66,7 @@ function displayTableBaixas(acoes) {
 
     tabelaBaixa.innerHTML = acoes.map(acao => `
             <tr>
-                <td><a href="../TelaAcao/Acao.html?tag=${acao.tag}">${acao.tag}</a></td>
+                <td><a href="../HTML/Acao.html?tag=${acao.tag}">${acao.tag}</a></td>
                 <td>${acao.nome}</td>
                 <td>${acao.variacao}%</td>
                 <td>${acao.preco} R$</td>

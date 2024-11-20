@@ -1,63 +1,25 @@
-
 document.addEventListener('DOMContentLoaded', async () => {
-    await carregarUsuarios();
+
+  
+    await carregarNavbar()
     await getAcoes();
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/darckMode.png';
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/ligthMode.png';
-    }
+
 });
 
-let usuarios = [];
-let acoes = [];
-
-
-
-async function carregarUsuarios() {
+async function carregarNavbar() {
     try {
-        const response = await fetch(`http://localhost:8080/usuario`); // Aguarda a resposta da requisição
-        if (!response.ok) {
-            throw new Error(`Erro ao buscar usuarios: ${response.status}`);
+        const navbarResponse = await fetch('NavBarCliente.html');  
+        if (navbarResponse.ok) {
+            const navbarHtml = await navbarResponse.text();
+            document.getElementById('navbar-container').innerHTML = navbarHtml;
+        } else {
+            console.error('Erro ao carregar a navbar: Arquivo não encontrado.');
         }
-
-        const data = await response.json(); // Aguarda a conversão para JSON
-        usuarios = data
-        console.log(usuarios)
-
-    } catch (error) {
-        console.error('Erro:', error.message);
+    } catch (err) {
+        console.error('Erro ao tentar carregar a navbar:', err);
     }
 }
 
-function verificar() {
-    event.preventDefault();
-
-    const email = document.getElementById("InputEmail").value
-    const senha = document.getElementById("InputPassword").value
-    const usuarioEncontrado = usuarios.find(usuario => email == usuario.email && senha == usuario.senha)
-
-    if (usuarioEncontrado) {
-
-        email.value = ""
-        senha.value = ""
-        window.location.href = "../TelaPrincipal/TelaPrincipal.html";  // Substitua pela URL para onde deseja redirecionar
-        console.log("Usuario Encontrado")
-
-    } else {
-        alert("seu email ou senhas estão incorretos")
-    }
-
-}
-
-
-/* barra de pesquisa */
 function buscarAcoes() {
     const searchTerm = document.getElementById("search").value.toLowerCase(); // Captura o valor da pesquisa
     
@@ -116,23 +78,5 @@ async function getAcoes() {
         tableAlta.innerHTML = `<p>Erro ao carregar produtos: ${error.message}</p>`;
     }
 
-}
-
-
-function mudarTema(){
-    const body = document.body;
-    const img = document.getElementById('imgTheme')
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        img.src = '../Img/darckMode.png'
-        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
-
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        img.src = "../Img/ligthMode.png"
-        localStorage.setItem('theme','light')
-    }
 }
 

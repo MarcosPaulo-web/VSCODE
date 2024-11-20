@@ -4,21 +4,28 @@ const searchResults = document.getElementById('searchResults');
 
 // Ouvinte de evento para garantir que o código só execute após o carregamento completo da página
 document.addEventListener('DOMContentLoaded', async () => {
+    
     getTag();  // Chama a função para pegar a tag da URL
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/darckMode.png';
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/ligthMode.png';
-    }
+    await carregarTema();
+   
 });
 
 let acoes = [];
+function carregarTema(){
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const img = document.getElementById('imgTheme');
+    
+    if (savedTheme === 'dark') {
+        body.classList.add('dark');
+        img.src = '../Img/ligthMode.png';
+
+    } else {
+        body.classList.add('light');
+        img.src = '../Img/darckMode.png';
+
+    }
+}
 
 // Função para pegar a tag da URL
 function getTag() {

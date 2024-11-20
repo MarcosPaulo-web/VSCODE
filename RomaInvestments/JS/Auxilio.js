@@ -1,22 +1,29 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
+
     await getAcoes();
+    await carregarTema()
+
+});
+
+
+let acao =[];
+
+function carregarTema(){
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const img = document.getElementById('imgTheme');
     
     if (savedTheme === 'dark') {
         body.classList.add('dark');
-        img.src = '../Img/darckMode.png';
+        img.src = '../Img/ligthMode.png';
+
     } else {
         body.classList.add('light');
-        img.src = '../Img/ligthMode.png';
+        img.src = '../Img/darckMode.png';
+
     }
-});
-
-
-let acao =[];
-
+}
 
 async function getAcoes() {
 
