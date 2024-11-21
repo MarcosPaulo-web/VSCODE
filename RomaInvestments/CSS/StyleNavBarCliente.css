@@ -34,7 +34,7 @@
     padding: 0%;
     list-style: none;
     font-family: 'Times New Roman', Times, serif;
-  
+
   }
   
   
@@ -63,17 +63,20 @@
   nav {
     background-color: var(--secundary-color) !important;
     font-size: 1.5rem;
-    z-index: 1000;
     position: absolute;
+    z-index: 999;
   }
+
   nav button img{
     max-width: 50px;
     max-height: 50px ;
   }
+
   nav button{
     background-color: transparent;
     border: none;
   }
+  
   nav a {
     color: var(--text-color-nav) !important;
     margin-inline: 10px;
@@ -169,7 +172,7 @@
       /* Limita a altura da lista */
       overflow-y: auto;
       /* Permite rolagem */
-      z-index: 1001;
+      z-index: 1000;
       /* Garante que a lista fique acima de outros elementos */
       border-radius: 8px;
       /* Cantos arredondados */

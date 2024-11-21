@@ -1,8 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
 
-    await getAcoes();
     await carregarTema()
+    await getAcoes();
 
 });
 

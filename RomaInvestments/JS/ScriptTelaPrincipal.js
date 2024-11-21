@@ -4,7 +4,7 @@ const empresas = document.getElementById('empresas')
 const searchResults = document.getElementById('searchResults');
 
 document.addEventListener('DOMContentLoaded', async () => {
-    
+   
     await getAcoes();
     await carregarTema()
 
