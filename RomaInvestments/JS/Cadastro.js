@@ -1,33 +1,23 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    await carregarTema()
-    await getAcoes();
     await carregarUsuarios();
 
-
-   
 });
 
-let usuarios = [];
-let acao =[];
+async function carregarUsuarios() {
+    try {
+        const response = await fetch(`http://localhost:8080/usuario`);
+        if (!response.ok) {
+            throw new Error(`Erro ao buscar usuarios: ${response.status}`);
+        }
 
-function carregarTema(){
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/ligthMode.png';
+        const data = await response.json(); // Aguarda a conversão para JSON
+        usuarios = data
+        console.log(usuarios)
 
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/darckMode.png';
-
+    } catch (error) {
+        console.error('Erro:', error.message);
     }
 }
-
-/* cadastrar */
-
 function cadastrar(){
     const emailInput = document.getElementById('InputEmail').value;
     const senhaInput = document.getElementById('InputPassword').value;
@@ -70,14 +60,20 @@ function cadastrar(){
         .then(data => {
             alert('Dados enviados com sucesso!');
             console.log('Resposta da API:', data);
-            // Redirecionamento após sucesso (opcional)
-            window.location.href = "../TelaPrincipal/TelaPrincipal.html"; 
+            window.location.href = "../HTML/TelaPrincipal.html"; 
         })
         .catch(error => {
-            console.error('Erro:', error);
+            console.error('por que deu erro de novoooooo:', error);
             alert(`Erro: ${error.message}`);
         });
     }}
+let usuarios = [];
+let acao =[];
+
+
+/* cadastrar */
+
+
     
 
 
@@ -101,7 +97,7 @@ function verificarUsuarioExistente() {
     const emailInput = document.getElementById("InputEmail").value; // Captura o valor do email
 
     // Verifica se algum usuário já possui esse email
-    const usuarioEncontrado = usuarios.find(usuario => emailInput === usuario.email);
+    const usuarioEncontrado = usuarios.find(usuario => emailInput == usuario.email);
 
     if (usuarioEncontrado) {
         console.log("Usuário encontrado");
@@ -113,39 +109,5 @@ function verificarUsuarioExistente() {
 }
 /* fim cadastrar */
 /* navbar */
-async function carregarUsuarios() {
-    try {
-        const response = await fetch(`http://localhost:8080/usuario`);
-        if (!response.ok) {
-            throw new Error(`Erro ao buscar usuarios: ${response.status}`);
-        }
 
-        const data = await response.json(); // Aguarda a conversão para JSON
-        usuarios = data
-        console.log(usuarios)
 
-    } catch (error) {
-        console.error('Erro:', error.message);
-    }
-}
-
-/* mudar tema */
-
-function mudarTema(){
-    const body = document.body;
-    const img = document.getElementById('imgTheme')
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        img.src = '../Img/darckMode.png'
-        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
-
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        img.src = "../Img/ligthMode.png"
-        localStorage.setItem('theme','light')
-    }
-}
-
-/* fim mudar tema */

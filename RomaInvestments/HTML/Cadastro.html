@@ -15,7 +15,7 @@
     <div id="navbar-container"></div>
 
     <main>
-        <div class="forms">
+        <div class="forms" onsubmit="verificarUsuarioExistente(event)">
             <form>
                 <div class="mb-3">
                     <label for="InputEmail" class="form-label">Email</label>
@@ -31,7 +31,7 @@
                     <input type="number" class="form-control" id="InputTelefone" aria-describedby="TelefoneHelp"
                         placeholder="9 DIGITOS" oninput="mascaraTel()">
                 </div>
-                <button onclick="verificarUsuarioExistente()" class="btn btn-outline-primary">Cadastrar</button>
+                <button class="btn btn-outline-primary">Cadastrar</button>
             </form>
         </div>
     </main>
