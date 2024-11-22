@@ -4,30 +4,10 @@ const empresas = document.getElementById('empresas')
 const searchResults = document.getElementById('searchResults');
 
 document.addEventListener('DOMContentLoaded', async () => {
-   
-    await getAcoes();
-    await carregarTema()
-
-
+       await getAcoes();
 })
 
 let acoes = [];
-function carregarTema(){
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/ligthMode.png';
-
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/darckMode.png';
-
-    }
-}
-
 
 async function getAcoes() {
 
@@ -39,14 +19,36 @@ async function getAcoes() {
 
         const data = await response.json(); // Aguarda a conversão para JSON
         acoes = data; // Supondo que a resposta já seja uma lista de produtos
-        console.log('carregar produtos :', acoes)
+        console.log('carregar Ações :', acoes)
         variacaoCrescente(acoes);
         variacaoDecrescente(acoes);
         numerosEmpresas(acoes);
     } catch (error) {
         console.error('Erro:', error.message);
-        tableAlta.innerHTML = `<p>Erro ao carregar produtos: ${error.message}</p>`;
+        tableAlta.innerHTML = `<p>Erro ao carregar Açoes: ${error.message}</p>`;
     }
+
+}
+
+function variacaoDecrescente(acoes) {
+
+    const acaoBaixas = [...acoes].sort((a, b) => {
+        const variacaoA = typeof a.variacao === 'string' ? parseFloat(a.variacao.replace(',', '.')) : a.variacao;
+        const variacaoB = typeof b.variacao === 'string' ? parseFloat(b.variacao.replace(',', '.')) : b.variacao;
+        return variacaoB - variacaoA;
+    });
+    displayTableAltas(acaoBaixas.slice(0, 5));
+
+
+}
+
+function variacaoCrescente(acoes) {
+    const acaoAltas = [...acoes].sort((a, b) => {
+        const variacaoA = typeof a.variacao === 'string' ? parseFloat(a.variacao.replace(',', '.')) : a.variacao;
+        const variacaoB = typeof b.variacao === 'string' ? parseFloat(b.variacao.replace(',', '.')) : b.variacao;
+        return variacaoA - variacaoB;
+    });  
+     displayTableBaixas(acaoAltas.slice(0, 5));
 
 }
 
@@ -74,46 +76,9 @@ function displayTableBaixas(acoes) {
         `).join('');
 }
 
-function variacaoDecrescente(acoes) {
 
-    const acaoBaixas = [...acoes].sort((a, b) => {
-        const variacaoA = typeof a.variacao === 'string' ? parseFloat(a.variacao.replace(',', '.')) : a.variacao;
-        const variacaoB = typeof b.variacao === 'string' ? parseFloat(b.variacao.replace(',', '.')) : b.variacao;
-        return variacaoB - variacaoA;
-    });
-    displayTableAltas(acaoBaixas.slice(0, 5));
-
-
-}
-
-function variacaoCrescente(acoes) {
-    const acaoAltas = [...acoes].sort((a, b) => {
-        const variacaoA = typeof a.variacao === 'string' ? parseFloat(a.variacao.replace(',', '.')) : a.variacao;
-        const variacaoB = typeof b.variacao === 'string' ? parseFloat(b.variacao.replace(',', '.')) : b.variacao;
-        return variacaoA - variacaoB;
-    });    displayTableBaixas(acaoAltas.slice(0, 5));
-
-}
 
 function numerosEmpresas(acoes){
     empresas.innerHTML = `Açoes : ${[...acoes].length} `;    
-}
-
-
-function mudarTema(){
-    const body = document.body;
-    const img = document.getElementById('imgTheme')
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        img.src = '../Img/darckMode.png'
-        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
-
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        img.src = "../Img/ligthMode.png"
-        localStorage.setItem('theme','light')
-    }
-}
+;}
 

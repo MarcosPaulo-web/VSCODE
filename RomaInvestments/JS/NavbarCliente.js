@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   
     await carregarNavbar()
-    await getAcoes();
+    await getAcoesNavbar();
     await carregarTema()
 
 });
@@ -60,7 +60,7 @@ function displaySearchResults(filteredAcoes) {
 }
 
 /* fim da barra de pesquisa */ 
-async function getAcoes() {
+async function getAcoesNavbar() {
 
     try {
         const response = await fetch(`https://mocki.io/v1/dd116615-1af1-47bf-b7c1-02e51b99d7d8`); // Aguarda a resposta da requisição

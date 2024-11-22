@@ -71,7 +71,6 @@ let usuarios = [];
 let acao =[];
 
 
-/* cadastrar */
 
 
     
@@ -107,7 +106,6 @@ function verificarUsuarioExistente() {
         cadastrar()
     }
 }
-/* fim cadastrar */
-/* navbar */
+
 
 
