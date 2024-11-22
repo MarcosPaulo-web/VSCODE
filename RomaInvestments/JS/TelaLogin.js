@@ -64,6 +64,7 @@ function verificar(event) {
 
     if (usuarioEncontrado) {
         console.log("Usuário encontrado:", usuarioEncontrado);
+        localStorage.setItem("usuario",JSON.stringify(usuarioEncontrado));
         window.location.href = "../HTML/TelaPrincipal.html"; // Redireciona para a próxima página
     } else {
         alert("Seu email ou senha estão incorretos");

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await carregarNavbar()
     await getAcoesNavbar();
     await carregarTema()
+    pegarUsuario()
 
 });
 
@@ -111,6 +112,19 @@ function carregarTema(){
         img.src = '../Img/darckMode.png';
 
     }
+}
+
+function pegarUsuario(){
+    const linkPerfil = document.getElementById("iconPerfil")
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+    if(usuario  ){
+    console.log(usuario)
+    document.getElementById('textEntrar').textContent = "Meu Perfil";
+    linkPerfil.href = '#prefilCliente'
+}else{
+    document.getElementById('textEntrar').textContent = "Logar";
+    linkPerfil.href = '../HTML/TelaLogin.html'
+}
 }
 
 /* fim mudar tema */
