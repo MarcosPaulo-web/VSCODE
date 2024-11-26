@@ -70,12 +70,6 @@ function cadastrar(){
 let usuarios = [];
 let acao =[];
 
-
-
-
-    
-
-
 function mascaraTel() {
 
     const telInput = document.getElementById("InputTelefone");
