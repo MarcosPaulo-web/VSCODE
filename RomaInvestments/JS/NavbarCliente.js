@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
-  
+
     await carregarNavbar()
     await getAcoesNavbar();
-    await carregarTema()
+    carregarTema()
     pegarUsuario()
 
 });
 
 async function carregarNavbar() {
     try {
-        const navbarResponse = await fetch('NavBarCliente.html');  
+        const navbarResponse = await fetch('NavBarCliente.html');
         if (navbarResponse.ok) {
             const navbarHtml = await navbarResponse.text();
             document.getElementById('navbar-container').innerHTML = navbarHtml;
@@ -24,7 +24,7 @@ async function carregarNavbar() {
 
 function buscarAcoes() {
     const searchTerm = document.getElementById("search").value.toLowerCase(); // Captura o valor da pesquisa
-    
+
     if (searchTerm.length === 0) {
         // Se o campo de pesquisa estiver vazio, limpar os resultados
         searchResults.innerHTML = '';
@@ -60,7 +60,7 @@ function displaySearchResults(filteredAcoes) {
     }
 }
 
-/* fim da barra de pesquisa */ 
+/* fim da barra de pesquisa */
 async function getAcoesNavbar() {
 
     try {
@@ -81,7 +81,7 @@ async function getAcoesNavbar() {
 
 /* mudar tema */
 
-function mudarTema(){
+function mudarTema() {
     const body = document.body;
     const img = document.getElementById('imgTheme')
     if (body.classList.contains('light')) {
@@ -94,15 +94,15 @@ function mudarTema(){
         body.classList.remove('dark');
         body.classList.add('light');
         img.src = "../Img/ligthMode.png"
-        localStorage.setItem('theme','light')
+        localStorage.setItem('theme', 'light')
     }
 }
 
-function carregarTema(){
+function carregarTema() {
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const img = document.getElementById('imgTheme');
-    
+
     if (savedTheme === 'dark') {
         body.classList.add('dark');
         img.src = '../Img/ligthMode.png';
@@ -114,17 +114,22 @@ function carregarTema(){
     }
 }
 
-function pegarUsuario(){
+function pegarUsuario() {
     const linkPerfil = document.getElementById("iconPerfil")
     const usuario = JSON.parse(localStorage.getItem("usuario"));
-    if(usuario  ){
-    console.log(usuario)
-    document.getElementById('textEntrar').textContent = "Meu Perfil";
-    linkPerfil.href = '#prefilCliente'
-}else{
-    document.getElementById('textEntrar').textContent = "Logar";
-    linkPerfil.href = '../HTML/TelaLogin.html'
-}
+    const linkCadastrar = document.getElementById("linkCadastrar");
+    if (usuario) {
+        console.log(usuario)
+        document.getElementById('textEntrar').textContent = "deslogar";
+        linkPerfil.href = '../HTML/TelaLogin.html'
+        linkCadastrar.textContent = "minhas ações"
+        linkCadastrar.href = "../HTML/AcoesUsuario.html"
+    } else {
+        document.getElementById('textEntrar').textContent = "Logar";
+        linkPerfil.href = '../HTML/TelaLogin.html'
+        linkCadastrar.textContent = "cadastre-se"
+        linkCadastrar.href = "../HTML/Cadastro.html"
+    }
 }
 
 /* fim mudar tema */
