@@ -1,0 +1,52 @@
+:root {
+    --primary-color: #fff;
+    --secundary-color: #7a1111;
+    --secundary-plus-dark: #660d0d;
+    --backgrond-form: #f9f9f9;
+    --text-color: #000;
+    --dourado: #B8860B;
+    --shadow: #464646;
+    --text-color-nav:#fff;
+    --button-toogle :#000000;
+    --table-line-color: #fff;
+  }
+
+  * {
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  
+  /* botão themeMode */
+  
+  body {
+   transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    --primary-color: #121212;
+    --text-color: #ffffff;
+    --backgrond-form: #464646; 
+    --text-color-nav:#fff; 
+    --icon-Perfil :#fff;
+    --button-toogle :var(--dourado);
+    --table-line-color: #ffffff;
+  
+  
+  }
+  body.light {
+    --primary-color: #fff;
+    --text-color: #000;
+    --backgrond-form: #f9f9f9;
+    --text-color-nav:#fff;
+    --icon-Perfil : #fff;
+    --button-toogle :transparent;
+    --table-line-color: #b4b4b4;
+  
+  }
+  body{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }

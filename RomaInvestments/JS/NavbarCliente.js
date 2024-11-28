@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     await carregarNavbar()
     await getAcoesNavbar();
     carregarTema()
-    pegarUsuario()
 
 });
 
@@ -114,22 +113,3 @@ function carregarTema() {
     }
 }
 
-function pegarUsuario() {
-    const linkPerfil = document.getElementById("iconPerfil")
-    const usuario = JSON.parse(localStorage.getItem("usuario"));
-    const linkCadastrar = document.getElementById("linkCadastrar");
-    if (usuario) {
-        console.log(usuario)
-        document.getElementById('textEntrar').textContent = "deslogar";
-        linkPerfil.href = '../HTML/TelaLogin.html'
-        linkCadastrar.textContent = "minhas ações"
-        linkCadastrar.href = "../HTML/AcoesUsuario.html"
-    } else {
-        document.getElementById('textEntrar').textContent = "Logar";
-        linkPerfil.href = '../HTML/TelaLogin.html'
-        linkCadastrar.textContent = "cadastre-se"
-        linkCadastrar.href = "../HTML/Cadastro.html"
-    }
-}
-
-/* fim mudar tema */
