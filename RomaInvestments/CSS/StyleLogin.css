@@ -18,7 +18,7 @@
   text-decoration: none !important;
 }
 
-/* botão themeMode */
+
 
 body {
   transition: background-color 0.3s, color 0.3s;
@@ -59,21 +59,28 @@ body.light {
   }
 }
 
-/* fim header */
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-/* body  */
 body {
   background-color: var(--primary-color);
   overflow-y: auto;
+}
+
+#title{
+  margin-top: 7%;
 }
 
 .forms {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
   width: 100%;
-
+margin-top: 1%;
 }
 
 
@@ -84,7 +91,8 @@ form {
   padding: 20px;
   border-radius: 10px;
   background-color: var(--backgrond-form);
-  box-shadow: 0 4px 8px var(--shadow, 0.1)
+  box-shadow: 0 4px 8px var(--shadow, 0.1);
+  margin-top: 3%;
 }
 
 form .btn {

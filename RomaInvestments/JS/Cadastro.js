@@ -102,4 +102,6 @@ function verificarUsuarioExistente() {
 }
 
 
-
+function voltarLogin(){
+    window.location.href = "../HTML/TelaLogin.html"
+}

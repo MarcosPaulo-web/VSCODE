@@ -16,14 +16,9 @@
     padding: 0%;
     list-style: none;
     font-family: 'Times New Roman', Times, serif;
-  
   }
   
-  /* botão themeMode */
   
-  body {
-   transition: background-color 0.3s, color 0.3s;
-  }
   
   body.dark {
     --primary-color: #121212;
@@ -33,8 +28,8 @@
     --icon-Perfil :#fff;
     --button-toogle :var(--dourado);
     --table-line-color: #ffffff;
-  
-  
+    
+    
   }
   body.light {
     --primary-color: #fff;
@@ -44,9 +39,40 @@
     --icon-Perfil : #fff;
     --button-toogle :transparent;
     --table-line-color: #b4b4b4;
-  
+    
   }
-  body{
+ 
+  body {
+   transition: background-color 0.3s, color 0.3s;
+   background-color: var(--primary-color)!important;
+   color: var(--text-color)!important;
+  }
+
+  main{
     background-color: var(--primary-color);
-    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%  ;
   }
+
+  .forms{
+    background-color: var(--backgrond-form);
+    width: 75%;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  #btnConfirmar{
+    display: none;
+  }
+.buttons{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#btnLogout{
+  width: 75%;
+  margin-top: 2%;
+}

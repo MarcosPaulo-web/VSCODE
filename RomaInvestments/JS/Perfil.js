@@ -1,43 +1,50 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
-        await carregarTema();
-        await  pegarUsuario();
- 
+    await pegarUsuario();
+
 });
 
-function carregarTema() {
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-    
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/ligthMode.png';
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/darckMode.png';
-    }
-}
 
-function pegarUsuario(){
+
+function pegarUsuario() {
     let usuario = [];
     usuario = localStorage.getItem('usuario')
     console.log(usuario)
+    usuario = JSON.parse(usuario); // Converte a string JSON de volta para objeto
+    setDataUsuario(usuario);
+}
+
+function setDataUsuario(usuario){
+    const inputNome = document.getElementById("InputNome");
+    const inputEmail = document.getElementById("InputEmail");
+    const inputSenha = document.getElementById("InputPassword")
+    const inputTelefone = document.getElementById("InputTelefone")
+    inputNome.value = "sem nome"
+    inputEmail.value = usuario.email || "sem email";
+    inputSenha.value = usuario.senha  || "sem senha";
+    inputTelefone.value = usuario.telefone || "000000000"
 }
 
 
-function mudarTema() {
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-        body.classList.add('dark');
-        img.src = "../Img/ligthMode.png";
-        localStorage.setItem('theme', 'dark'); // Salva o tema no localStorage
-    } else {
-        body.classList.remove('dark');
-        body.classList.add('light');
-        img.src = '../Img/darckMode.png';
-        localStorage.setItem('theme', 'light');
-    }
+function showEditar(event) {
+    event.preventDefault(event);  // Evita o comportamento padrão (recarregar a página)
+    const inputNome = document.getElementById("InputNome");
+    const inputEmail = document.getElementById("InputEmail");
+    const inputSenha = document.getElementById("InputPassword")
+    const inputTelefone = document.getElementById("InputTelefone")
+    inputNome.readOnly = false;
+    inputEmail.readOnly = false;
+    inputSenha.readOnly = false;
+    inputTelefone.readOnly = false;
+
+    const btnConfirmar = document.getElementById("btnConfirmar");
+    btnConfirmar.style.display = "block"
 }
+
+function logout(){
+    localStorage.setItem('usuario','')
+    window.location.href ="../HTML/TelaLogin.html"
+    alert("Usuario deslogado com sucesso")
+}
+
+

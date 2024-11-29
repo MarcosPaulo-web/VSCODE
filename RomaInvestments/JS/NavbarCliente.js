@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     await carregarNavbar()
-    await getAcoesNavbar();
     carregarTema()
-
+    await getAcoesNavbar();
+    
 });
 
 async function carregarNavbar() {
@@ -20,6 +20,23 @@ async function carregarNavbar() {
         console.error('Erro ao tentar carregar a navbar:', err);
     }
 }
+
+function carregarTema() {
+    const savedTheme = localStorage.getItem('theme');
+    const body = document.body;
+    const img = document.getElementById('imgTheme');
+
+    if (savedTheme === 'dark') {
+        body.classList.add('dark');
+        img.src = '../Img/ligthMode.png';
+
+    } else {
+        body.classList.add('light');
+        img.src = '../Img/darckMode.png';
+
+    }
+}
+
 
 function buscarAcoes() {
     const searchTerm = document.getElementById("search").value.toLowerCase(); // Captura o valor da pesquisa
@@ -51,7 +68,7 @@ function displaySearchResults(filteredAcoes) {
 
         searchResults.innerHTML = filteredAcoes.map(acao => `
             <div class="list-group">
-                <a href="../TelaAcao/Acao.html?tag=${acao.tag}" class="list-group-item list-group-item-action">
+                <a href="../HTML/Acao.html?tag=${acao.tag}" class="list-group-item list-group-item-action">
                     ${acao.nome} - ${acao.tag} - ${acao.preco} R$
                 </a>
             </div>
@@ -96,20 +113,3 @@ function mudarTema() {
         localStorage.setItem('theme', 'light')
     }
 }
-
-function carregarTema() {
-    const savedTheme = localStorage.getItem('theme');
-    const body = document.body;
-    const img = document.getElementById('imgTheme');
-
-    if (savedTheme === 'dark') {
-        body.classList.add('dark');
-        img.src = '../Img/ligthMode.png';
-
-    } else {
-        body.classList.add('light');
-        img.src = '../Img/darckMode.png';
-
-    }
-}
-

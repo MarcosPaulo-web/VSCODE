@@ -14,6 +14,7 @@
 <body >
 
     <main>
+        <h1 class="title">Cadastro</h1>
         <div class="forms" onsubmit="verificarUsuarioExistente(event)">
             <form>
                 <div class="mb-3">
@@ -30,7 +31,9 @@
                     <input type="number" class="form-control" id="InputTelefone" aria-describedby="TelefoneHelp"
                         placeholder="9 DIGITOS" oninput="mascaraTel()">
                 </div>
+                <div class="btns">
                 <button class="btn btn-outline-primary">Cadastrar</button>
+                <button class="btn btn-outline-danger" type="button" id="btnVoltar" onclick="voltarLogin()">Voltar</button>
             </form>
         </div>
     </main>
