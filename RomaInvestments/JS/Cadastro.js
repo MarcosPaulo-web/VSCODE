@@ -22,6 +22,9 @@ function cadastrar(){
     const emailInput = document.getElementById('InputEmail').value;
     const senhaInput = document.getElementById('InputPassword').value;
     const telInput = document.getElementById('InputTelefone').value;
+    console.log(emailInput);
+    console.log(senhaInput);
+    console.log(telInput);
     let tele = false;
 
     if (telInput.length < 9) {  

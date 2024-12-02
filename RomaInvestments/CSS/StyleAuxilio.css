@@ -86,13 +86,26 @@ main{
     padding-bottom: 30px;
     width: 80%;
 }
+.dicas  {
+    display: flex;
+    margin-top: 5%;
+    flex-direction: column;
+    border-bottom: solid 3px var(--dourado)!important ;
+    padding-bottom: 30px;
+    width: 80%;
+}
 
-.acoes .tipoAcao {
+.acoes .tipoAcao{
     margin-top: 15px;
     font-size: large;
     
 }
 .informacoes .tipoDado {
+    margin-top: 15px;
+    font-size: large;
+    
+}
+.dicas .tipoDica {
     margin-top: 15px;
     font-size: large;
     
