@@ -26,12 +26,12 @@ body {
 }
 
 body.dark {
-  --primary-color: #121212;
-  --text-color: #ffffff;
-  --backgrond-form: #464646; 
-  --text-color-nav:#fff; 
-  --icon-Perfil :#fff;
-  --button-toogle :var(--dourado);
+  --primary-color: #121212 !important;
+  --text-color: #ffffff !important;
+  --backgrond-form: #464646 !important; 
+  --text-color-nav:#fff !important; 
+  --icon-Perfil :#fff !important;
+  --button-toogle :var(--dourado) !important;
 
 }
 body.light {

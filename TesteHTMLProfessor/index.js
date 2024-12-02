@@ -1,5 +1,5 @@
 // URL da API
-const apiUrl = 'http://localhost:8080/produto';  
+const apiUrl = 'http://localhost:8080/usuario';  
 
 document.getElementById('getDataBtn').addEventListener('click', function() {
     const produtoId = document.getElementById('produtoId').value;
@@ -48,13 +48,15 @@ document.getElementById('sendDataBtn').addEventListener('click', function() {
 
     if (nmProduto && vlProduto) {
         const payload = {
-            nmProduto: nmProduto,
-            vlProduto: parseInt(vlProduto, 10)
+
+            email: nmProduto,
+            senha: "senha",
+            telefone: 123098456
         };
         console.log('Payload enviado:', payload); // Log do payload
         
 
-        fetch(apiUrl, {
+        fetch(`http://localhost:8080/usuario`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

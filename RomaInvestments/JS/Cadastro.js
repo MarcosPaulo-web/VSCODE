@@ -18,60 +18,53 @@ async function carregarUsuarios() {
         console.error('Erro:', error.message);
     }
 }
-function cadastrar(){
-    const emailInput = document.getElementById('InputEmail').value;
-    const senhaInput = document.getElementById('InputPassword').value;
-    const telInput = document.getElementById('InputTelefone').value;
-    console.log(emailInput);
-    console.log(senhaInput);
-    console.log(telInput);
-    let tele = false;
+function cadastrar(event){
+    event.preventDefault();
+    const emailIn = document.getElementById('InputEmail').value;
+    const senhaIn = document.getElementById('InputPassword').value;
+    const telIn = document.getElementById('InputTelefone').value;
 
-    if (telInput.length < 9) {  
-        alert("Número de telefone incompleto ou inválido! Certifique-se de ter 9 dígitos.");
-        return;  // Impede o envio do formulário caso o telefone seja inválido
-    } else {
-        tele = true;  // Telefone válido
-    }
-    
-    if ( emailInput && senhaInput && tele == true) {
+    if (emailIn && senhaIn && telIn && verificarUsuarioExistente() == true) {
         const payload = {
-            email: emailInput,
-            senha: senhaInput,
-            telefone: telInput, // Envia apenas os números do telefone
+
+            email: emailIn,
+            senha: senhaIn,
+            telefone: telIn
         };
-    
-        console.log('Payload enviado:', payload); // Log para verificação
-    
-        // Envia os dados para a API
-        fetch('http://localhost:8080/usuario', {
+        console.log('Payload enviado:', payload); // Log do payload
+
+
+        fetch(`http://localhost:8080/usuario`, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(payload),
+            body: JSON.stringify(payload)
         })
-        .then(response => {
-            if (!response.ok) {
-                // Lança um erro se a resposta não for OK (status 2xx)
-                return response.text().then(text => {
-                    throw new Error(`Erro ao enviar dados: ${response.status} - ${text}`);
-                });
-            }
-            return response.json();
-        })
-        .then(data => {
-            alert('Dados enviados com sucesso!');
-            console.log('Resposta da API:', data);
-            window.location.href = "../HTML/TelaPrincipal.html"; 
-        })
-        .catch(error => {
-            console.error('por que deu erro de novoooooo:', error);
-            alert(`Erro: ${error.message}`);
-        });
-    }}
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro ao enviar dados: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert('Dados enviados com sucesso!');
+                console.log('Resposta da API:', data);
+                localStorage.setItem("usuario",JSON.stringify(usuarioEncontrado));
+                window.location.href = "../HTML/TelaPrincipal.html";
+                        })
+            .catch(error => {
+                alert(`Erro: ${error.message}`);
+                console.log(error.message)
+            });
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
+};
+
 let usuarios = [];
-let acao =[];
+let acao = [];
+let usuarioEncontrado = [];
 
 function mascaraTel() {
 
@@ -98,13 +91,14 @@ function verificarUsuarioExistente() {
     if (usuarioEncontrado) {
         console.log("Usuário encontrado");
         alert("Email já cadastrado");
-
+        return false
+       
     } else {
-        cadastrar()
+        return true
     }
 }
 
 
-function voltarLogin(){
+function voltarLogin() {
     window.location.href = "../HTML/TelaLogin.html"
 }
