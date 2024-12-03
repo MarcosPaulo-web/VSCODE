@@ -29,7 +29,7 @@ function carregarTema() {
     const savedTheme = localStorage.getItem('theme');
     const body = document.body;
     const img = document.getElementById('imgTheme');
-    
+
     if (savedTheme === 'dark') {
         body.classList.add('dark');
         img.src = '../Img/ligthMode.png';
@@ -55,7 +55,7 @@ async function carregarUsuarios() {
 }
 
 function verificar(event) {
-    event.preventDefault(); 
+    event.preventDefault();
     const email = document.getElementById("InputEmail").value;
     const senha = document.getElementById("InputPassword").value;
 
@@ -64,8 +64,12 @@ function verificar(event) {
 
     if (usuarioEncontrado) {
         console.log("Usuário encontrado:", usuarioEncontrado);
-        localStorage.setItem("usuario",JSON.stringify(usuarioEncontrado));
-        window.location.href = "../HTML/TelaPrincipal.html"; // Redireciona para a próxima página
+        if (usuarioEncontrado.email == 'adm@adm') {
+            window.location.href = "../HTML/TelaAdm.html"
+        } else {
+            localStorage.setItem("usuario", JSON.stringify(usuarioEncontrado));
+            window.location.href = "../HTML/TelaPrincipal.html";
+        }// Redireciona para a próxima página
     } else {
         alert("Seu email ou senha estão incorretos");
     }

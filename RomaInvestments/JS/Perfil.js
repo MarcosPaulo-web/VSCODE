@@ -107,6 +107,7 @@ function putUsuario(event) {
             .then(data => {
                 alert('Dados alterados com sucesso!');
                 console.log('Resposta da API:', data);
+                posEditar();
             })
             .catch(error => {
                 alert(`Erro: ${error.message}`);
@@ -116,3 +117,17 @@ function putUsuario(event) {
         alert('Por favor, preencha todos os campos.');
     }
 };
+
+function posEditar(){
+    const inputNome = document.getElementById("InputNome");
+    const inputEmail = document.getElementById("InputEmail");
+    const inputSenha = document.getElementById("InputPassword")
+    const inputTelefone = document.getElementById("InputTelefone")
+    inputNome.readOnly = true;
+    inputEmail.readOnly = true;
+    inputSenha.readOnly = true;
+    inputTelefone.readOnly = true;
+
+    const btnConfirmar = document.getElementById("btnConfirmar");
+    btnConfirmar.style.display = "none"
+}
