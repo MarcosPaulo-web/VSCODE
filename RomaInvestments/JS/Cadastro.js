@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 });
 
+let usuarios = [];
+let acao = [];
 async function carregarUsuarios() {
     try {
         const response = await fetch(`http://localhost:8080/usuario`);
@@ -18,15 +20,15 @@ async function carregarUsuarios() {
         console.error('Erro:', error.message);
     }
 }
-function cadastrar(event){
+function cadastrar(event) {
     event.preventDefault();
     const emailIn = document.getElementById('InputEmail').value;
     const senhaIn = document.getElementById('InputPassword').value;
     const telIn = document.getElementById('InputTelefone').value;
 
-    if (emailIn && senhaIn && telIn && verificarUsuarioExistente() == true) {
-        const payload = {
+    if (emailIn && senhaIn && telIn && verificarUsuarioExistente()) {
 
+        const payload = {
             email: emailIn,
             senha: senhaIn,
             telefone: telIn
@@ -50,9 +52,8 @@ function cadastrar(event){
             .then(data => {
                 alert('Dados enviados com sucesso!');
                 console.log('Resposta da API:', data);
-                localStorage.setItem("usuario",JSON.stringify(usuarioEncontrado));
                 window.location.href = "../HTML/TelaPrincipal.html";
-                        })
+            })
             .catch(error => {
                 alert(`Erro: ${error.message}`);
                 console.log(error.message)
@@ -62,18 +63,18 @@ function cadastrar(event){
     }
 };
 
-let usuarios = [];
-let acao = [];
-let usuarioEncontrado = [];
+
+
 
 function mascaraTel() {
 
     const telInput = document.getElementById("InputTelefone");
-    const telValue = telInput.value;  // Obtém o valor inserido no campo
-
+    const telValue = telInput.value;// Obtém o valor inserido no campo
+    telInput.value = telInput.value.replace(/[^0-9]/, '');
     if (telValue.length > 9) {
         // Se o comprimento for maior que 9, corta o valor para 9 caracteres
-        telInput.value = telValue.substring(0, 9);  // Limita o valor a 9 caracteres
+        telInput.value = telValue.substring(0, 9);
+        // Limita o valor a 9 caracteres
     }
 }
 
@@ -84,15 +85,12 @@ function mascaraEmail() {
 
 function verificarUsuarioExistente() {
     const emailInput = document.getElementById("InputEmail").value; // Captura o valor do email
-
-    // Verifica se algum usuário já possui esse email
-    const usuarioEncontrado = usuarios.find(usuario => emailInput == usuario.email);
+    let usuarioEncontrado = usuarios.find(usuario => emailInput == usuario.email);
 
     if (usuarioEncontrado) {
         console.log("Usuário encontrado");
         alert("Email já cadastrado");
         return false
-       
     } else {
         return true
     }

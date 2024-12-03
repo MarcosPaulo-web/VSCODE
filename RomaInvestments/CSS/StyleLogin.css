@@ -28,7 +28,7 @@ body {
 }
 
 body.dark {
-  --primary-color: #121212;
+  --primary-color: #121212!important;
   --text-color: #ffffff;
   --backgrond-form: #464646;
   --text-color-nav: #fff;
