@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet "href="../CSS/MeusContratos.css">
+    <title>Meus Contratos</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="theme-button" id="themeButton" onclick="toggleTheme()">
+                <div class="icon">🌙</div>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='TelaLogCliente.html'">Tela Principal</button>
+                <button>Meus Contratos</button>
+                <button onclick="location.href='PerfilCliente.html'">Meu Perfil</button>
+                <button onclick="location.href='AcharFree.html'">Achar Free</button>
+                <button onclick="location.href='TelaPrincipal.html'">Sair</button>
+            </div>
+            <div class="logo">
+                <img src="https://64.media.tumblr.com/0c402a698e45bf1530f545ed845dcb71/2733c02d6f3b653f-66/s250x400/3ea6f351bbe403ce9fa2646ab970fb322f398bff.pnj" alt="Logo" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Meus Contratos</h1>
+            <div class="card-container" id="card-container">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="verModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVerModal()">×</span>
+            <h2 id="modalTitle">Título do Contrato</h2>
+            <p id="modalDescription">Detalhes do contrato aparecerão aqui.</p>
+            <button onclick="closeVerModal()">Fechar</button>
+        </div>
+    </div>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeFeedbackModal()">×</span>
+            <h2>Encerrar</h2>
+            <p>Seu contrato foi encerrado, deixe seu feedback</p>
+    
+            <!-- Sistema de Avaliação com Drop-down -->
+            <select id="ratingDropdown" style="width: 100%; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                <option value="0">Selecione uma avaliação</option>
+                <option value="1">1 Estrela</option>
+                <option value="2">2 Estrelas</option>
+                <option value="3">3 Estrelas</option>
+                <option value="4">4 Estrelas</option>
+                <option value="5">5 Estrelas</option>
+            </select>
+    
+            <textarea placeholder="Dê seu feedback..." id="comentario" style="width: 100%;"></textarea>
+            <button onclick="submitFeedback()">Enviar</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../JS/MeusContratos.js"></script>

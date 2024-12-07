@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet "href="../CSS/Admin.css" >
+    <title>YouFree Relatórios</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="menu">
+                <!-- Botão deslizante para mudar o tema -->
+                <div class="theme-switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <button onclick="showFaturamentoModal()">Relatório de Faturamento</button>
+                <button onclick="showFeedbacksModal()">Relatório de Feedbacks</button>
+                <button onclick="showAcessosModal()">Relatório de Acessos</button>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <img src="c:\Users\iago_m_correa\Downloads\LogoSemFundo.png" alt="Logo">
+            <div class="title">Administração</div>
+        </div>
+    </div>
+
+    <!-- Modal Faturamento -->
+    <div id="modal-faturamento" class="modal">
+        <div class="modal-content">
+            <h2>Relatório de Faturamento</h2>
+            <p>Aqui estão as informações de faturamento do sistema.</p>
+            <textarea></textarea>
+            <br>
+            <br>
+            <button class="close-button" onclick="closeFaturamentoModal()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal Feedbacks -->
+    <div id="modal-feedbacks" class="modal">
+        <div class="modal-content">
+            <h2>Relatório de Feedbacks</h2>
+            <p>Aqui estão os feedbacks recebidos pelo sistema.</p>
+            <textarea></textarea>
+            <br>
+            <br>
+            <button class="close-button" onclick="closeFeedbacksModal()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal Acessos -->
+    <div id="modal-acessos" class="modal">
+        <div class="modal-content">
+            <h2>Relatório de Acessos</h2>
+            <p>Aqui estão os relatórios de acessos ao sistema.</p>
+            <textarea></textarea>
+            <br>
+            <br>
+            <button class="close-button" onclick="closeAcessosModal()">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../JS/Admin.js"></script>

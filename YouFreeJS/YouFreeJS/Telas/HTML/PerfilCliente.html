@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet "href="../CSS/Perfil.css">
+    <title>Meu Perfil</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="theme-button" id="themeButton" onclick="toggleTheme()">
+                <div class="icon">🌙</div>
+            </div>
+            <div class ="left">            
+                <div class="buttons">
+                    <button onclick="location.href='TelaLogCliente.html'">Tela Principal</button>
+                    <button onclick="location.href='MeusContratos.html'">Meus Contratos</button>
+                    <button >Meu Perfil</button>
+                    <button onclick="location.href='AcharFree.html'">Achar Free</button>
+                    <button onclick="logout()">Sair</button>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="https://64.media.tumblr.com/0c402a698e45bf1530f545ed845dcb71/2733c02d6f3b653f-66/s250x400/3ea6f351bbe403ce9fa2646ab970fb322f398bff.pnj" alt="Logo" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="profile-container">
+                <div class="profile-title">Meu Perfil</div>
+                <div class="profile-picture">
+                    <img id="profile-img" src="https://via.placeholder.com/100" alt="Foto de Perfil">
+                    <label for="upload-photo">✎</label>
+                    <input type="file" id="upload-photo" style="display: none;">
+                </div>
+                <form id="profile-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" value="" readonly="true">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="" readonly="true">
+
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" value="" readonly="true">
+
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" value="" readonly="true">
+
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" value="" readonly="true">
+
+                    <div class="buttons">
+                        <button type="button" class="edit-button" onclick="showEditar(event)">Alterar Dados</button>
+                        <button type="submit" class="save-button" onclick="putUsuario(event)">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../JS/PerfilCliente.js"></script>

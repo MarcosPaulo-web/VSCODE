@@ -1,0 +1,271 @@
+  /*Tela Principal*/
+
+        
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2dbcc;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.photo-premium {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center; /* Mantém tudo centralizado horizontalmente */
+    background-color: #a0ac74;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    gap: 10px; /* Controla o espaçamento entre os elementos */
+}
+
+.image-placeholder img {
+    max-width: none; /* Remove a limitação de largura */
+    height: auto; /* Mantém a proporção original */
+}
+
+.btn-left, .btn-right {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffbc6c;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-left {
+    margin-right: -10px; /* Reduz o espaçamento da esquerda */
+}
+
+.btn-right {
+    margin-left: -10px; /* Reduz o espaçamento da direita */
+}
+
+.photo-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.photo-container .image-placeholder img {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 2px dashed #e2dbcc;
+}
+    /* Estilo global e responsividade */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        color: #000;
+        transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .dark-mode {
+        background-color: #977d61;
+        color: #fff;
+    }
+
+    /* Header */
+    .header {
+        background-color: #9fa971;
+        color: #000;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        transition: background-color 0.5s ease;
+    }
+
+    .dark-mode .header {
+        background-color: #767d52;
+    }
+
+    .header .logo img {
+        height: 35px;
+        max-width: 100%;
+    }
+
+    .header .btn-group {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header .btn-group button {
+        background-color: #FFE085;
+        border: 2px solid #9fa971;
+        border-radius: 20px;
+        padding: 5px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .header .btn-group button:hover {
+        background-color: #fcbf6b;
+        transform: scale(1.05);
+    }
+
+    .header .theme-toggle {
+        background-color: transparent;
+        border: 2px solid #9fa971;
+        border-radius: 20px;
+        padding: 5px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .header .theme-toggle:hover {
+        background-color: #fcbf6b;
+        transform: scale(1.05);
+    }
+
+    /* Search Section */
+    .search-bar {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #fcbf6b;
+        border-radius: 15px;
+        margin: 20px;
+        transition: background-color 0.5s ease;
+    }
+
+    .dark-mode .search-bar {
+        background-color: #42302e;
+    }
+
+    .search-bar h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .search-bar input {
+        width: 90%;
+        max-width: 600px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+    }
+
+    .dark-mode .search-bar input {
+        background-color: #ffffff;
+        color: #000000;
+        border-color: #ffffff;
+    }
+
+    .category-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .category-buttons button {
+        background-color: #9fa971;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .category-buttons button:hover {
+        background-color: #7a8355;
+    }
+
+    .dark-mode .category-buttons button {
+        background-color: #7a8355;
+    }
+
+    /* Section "Por que escolher o YouFree?" */
+    .why-youfree {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        background-color: #9fa971;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 15px;
+        gap: 20px;
+    }
+
+    .why-youfree .text-content {
+        flex: 1;
+        min-width: 300px;
+    }
+
+    .why-youfree h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .why-youfree p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .why-youfree .highlight {
+        color: #f7ba00;
+        font-weight: bold;
+    }
+
+    .why-youfree .image-content img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .why-youfree {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .why-youfree .image-content img {
+            max-width: 90%;
+        }
+    }
+
+    /* Estilo para o Modal no Modo Escuro */
+    .dark-mode .modal-content {
+        background-color: #42302e;
+        color: #fff;
+    }
+
+    .dark-mode .modal-header, .dark-mode .modal-footer {
+        border-color: #555;
+    }
+
+    .dark-mode .form-control {
+        background-color: #555;
+        color: #fff;
+        border-color: #777;
+    }
+
+    .dark-mode .btn-primary {
+        background-color: #7a8355;
+        border-color: #7a8355;
+    }
+
+    .dark-mode .btn-secondary {
+        background-color: #555;
+        border-color: #555;
+    }

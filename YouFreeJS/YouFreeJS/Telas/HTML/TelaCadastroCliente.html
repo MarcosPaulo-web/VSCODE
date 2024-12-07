@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet "href="../CSS/TelaCadastroCliente.css">
+    <title>Cadastro de Cliente</title>
+</head>
+<body>
+    <!-- Logo fora do container -->
+    <img src="https://64.media.tumblr.com/0c402a698e45bf1530f545ed845dcb71/2733c02d6f3b653f-66/s250x400/3ea6f351bbe403ce9fa2646ab970fb322f398bff.pnj" alt="Logo do site" class="logo">
+
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <label for="telefone">Número de Telefone:</label>
+            <input type="number" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+            <label for="cpf">CPF:</label>
+            <input type="number" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <div class="buttons">
+                <button type="button" class="back" onclick="goBack()">Voltar</button>
+                <button type="submit" class="register" onclick="cadastrar(event)">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="../JS/TelaCadastroCliente.js"></script>

@@ -1,0 +1,177 @@
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf4e6; 
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #9fa971;
+            width: 15%;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .menu button {
+            background-color: #ffe19c;
+            border: none;
+            padding: 6px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+
+        .menu button:hover {
+            background-color: #ffcc66;
+        }
+
+        /* Botão deslizante para o tema */
+        .theme-switcher {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ffe19c;
+            transition: 0.4s;
+            border-radius: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "🌞";
+            font-size: 14px;
+            color: #000;
+            left: 5px;
+            bottom: 3px;
+            transition: 0.4s;
+        }
+
+        input:checked + .slider {
+            background-color: #42302e;
+        }
+
+        input:checked + .slider:before {
+            content: "🌙";
+            transform: translateX(25px);
+            color: #fff;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin: 0 0 10px;
+        }
+
+        .close-button {
+            background-color: #ff5e57;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            background-color: #ff3b30;
+        }
+
+        /* Tema escuro */
+        body.dark {
+            background-color: #42302e;
+            color: #fff;
+        }
+
+        body.dark .menu button {
+            background-color: #f3b63a;
+            color: #000;
+        }
+
+        body.dark .menu button:hover {
+            background-color: #d9a431;
+        }
+
+        body.dark .content .title {
+            color: #fff;
+        }
+
+        /* Estilo do conteúdo centralizado */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Coloca logo e texto em colunas */
+            text-align: center;
+        }
+
+        .content img {
+            max-width: 250px; /* Largura máxima da logo */
+            max-height: 150px; /* Altura máxima da logo */
+        }
+
+        .content .title {
+            margin-top: 15px; /* Espaço entre a logo e o texto */
+            font-size: 24px; /* Tamanho do texto abaixo da logo */
+            color: #555; /* Cor do texto */
+        }

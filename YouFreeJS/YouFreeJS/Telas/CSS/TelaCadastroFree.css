@@ -1,0 +1,179 @@
+/*Tela Cadastro Free*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff2e4;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+}
+
+body.dark-mode {
+    background-color: #42302e;
+    color: #f0f0f0;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #fcbf6b;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .container {
+    background-color: #977d61;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+    color: #000000;
+    margin-bottom: 18px;
+    font-size: 28px;
+    text-align: center;
+}
+
+body.dark-mode .container h1 {
+    color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form-group {
+    width: 48%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os elementos do grupo */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-align: center; /* Centraliza o texto da label */
+    width: 100%;
+}
+
+body.dark-mode label {
+    color: #f0f0f0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="number"] {
+    background-color: #fff2e4;
+    color: #f0f0f0;
+    border-color: #fff2e4;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.buttons button {
+    width: 55%;
+    padding: 12px;
+    margin-left: 2%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.buttons .back {
+    background-color: #9fa971;
+}
+
+.buttons .register {
+    background-color: #9fa971;
+}
+
+/* Responsividade para iPhone XR e S20 Ultra */
+@media (max-width: 900px) { /* Dispositivos menores */
+    .container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) { /* Smartphones menores */
+    .container {
+        padding: 15px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+body.dark-mode .theme-toggle {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,186 @@
+
+/*Achar Free*/
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 150px;
+    z-index: 10;
+    display: none;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #fcbf6b;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode {
+    background-color: #6b5b49;
+    color: #000000;
+}
+
+.header {
+    background-color: #9fa971;
+    color: #000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: background-color 0.5s ease;
+}
+
+.dark-mode .header {
+    background-color: #767d52;
+}
+
+.logo img {
+    height: 35px;
+    max-width: 100%;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-group button {
+    background-color: #fcbf6b;
+    border: 2px solid #9fa971;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-group button:hover {
+    background-color: #fcbf6b;
+    transform: scale(1.05);
+}
+
+.freelancer-card {
+    background-color: #fcbf6b;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.freelancer-card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #000;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ebe7db;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: red;
+}
+
+.card-container {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+}
+
+.freelancer-card {
+    background-color: #fcbf6b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.freelancer-card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.freelancer-card p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.freelancer-card button {
+    background-color: #e2dbcc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.freelancer-card button:hover {
+    background-color: #d9cbb5;
+}

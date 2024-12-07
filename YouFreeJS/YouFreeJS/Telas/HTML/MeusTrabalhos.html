@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/MeusTrabalhos.css">
+    <title>Meus Trabalhos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="theme-button" id="themeButton" onclick="toggleTheme()">
+                <div class="icon">🌙</div>
+            </div>
+            <div class="buttons">
+                <button onclick="location.href='TelaLogFree.html'">Tela Principal</button>
+                <button>Meus Trabalhos</button>
+                <button onclick="location.href='TelaPrincipal.html'">Sair</button>
+            </div>
+            <div class="logo">
+                <img src="https://64.media.tumblr.com/0c402a698e45bf1530f545ed845dcb71/2733c02d6f3b653f-66/s250x400/3ea6f351bbe403ce9fa2646ab970fb322f398bff.pnj" alt="Logo" style="max-width: 100%; max-height: 100%;">
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Meus Trabalhos</h1>
+            <div class="card-container" id="card-container">
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" style="display: none;">
+        <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); z-index: 1000; max-width: 400px; width: 90%;">
+            <button onclick="closeModal()" style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 18px; cursor: pointer;">&times;</button>
+            <h2 id="modalTitle">Título</h2>
+            <p id="modalDescription">Descrição:</p>
+            <p><strong>Local:</strong> <span id="modalLocal"></span></p>
+            <p><strong>Pagamento:</strong> <span id="modalPagamento"></span></p>
+            <p><strong>Data:</strong> <span id="modalData"></span></p>
+        </div>
+        <div onclick="closeModal()" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+    </div>
+</body>
+</html>
+<script src="../JS/MeusTrabalhos.js"></script>

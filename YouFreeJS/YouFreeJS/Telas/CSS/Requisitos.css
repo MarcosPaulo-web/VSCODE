@@ -1,0 +1,194 @@
+/*Requisitor*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.dark-mode {
+    background-color: #6b5b49;
+    color: #000;
+}
+
+.header {
+    background-color: #9fa971;
+    color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: background-color 0.5s ease;
+}
+
+*{
+    text-decoration: none!important;
+    padding: 0;
+}
+
+a{
+    color: #fff2e4;
+}
+.dark-mode .header {
+    background-color: #767d52;
+}
+
+.header .logo img {
+    height: 35px;
+    max-width: 100%;
+}
+
+.header .btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header .btn-group button {
+    background-color: #FFE085;
+    border: 2px solid #9fa971;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header .btn-group button:hover {
+    background-color: #fcbf6b;
+    transform: scale(1.05);
+}
+
+.header .theme-toggle {
+    background-color: transparent;
+    border: 2px solid #9fa971;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.header .theme-toggle:hover {
+    background-color: #fcbf6b;
+    transform: scale(1.05);
+}
+
+h1 {
+    color: #e2b647;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.form-container {
+    background-color: #fff2e4;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.form-container textarea, 
+.form-container input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form-container .radio-group {
+    margin-top: 10px;
+}
+
+.form-container .radio-group label {
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.form-container .btn {
+    background-color: #9fa971;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.form-container .btn:hover {
+    background-color: #767d52;
+}
+
+.form-container .btn:active {
+    transform: scale(0.98);
+}
+
+.form-container .btn-back {
+    background-color: #fcbf6b;
+}
+
+/* Ajustando o menu dropdown para dispositivos móveis */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #fcbf6b;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .header .btn-group button,
+    .header .theme-toggle {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

@@ -1,0 +1,127 @@
+/*Tela Cadastro Cliente*/
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #fff2e4;
+    padding: 10px; /* Padding para evitar que o conteúdo toque nas bordas */
+}
+
+.logo {
+    width: 150px; /* Logo com tamanho fixo */
+    margin-bottom: 20px;
+    object-fit: contain; /* Garante que a logo não distorça */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Limita o tamanho máximo do container */
+    padding: 20px;
+    background-color: #fcbf6b;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h1 {
+    color: #000;
+    font-size: 26px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que o padding seja incluído no tamanho total do input */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons .back {
+    background-color: #9fa971;
+}
+
+.buttons .register {
+    background-color: #9fa971;
+}
+
+.buttons button:hover {
+    transform: scale(1.03); /* Leve zoom ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px; /* Reduz a logo em dispositivos móveis */
+    }
+    .container {
+        width: 90%; /* Ajusta a largura do container para caber melhor nas telas pequenas */
+        padding: 15px;
+    }
+    .container h1 {
+        font-size: 22px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input {
+        font-size: 14px;
+    }
+    .buttons button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px; /* Ajusta mais ainda a logo para telas muito pequenas */
+    }
+    .container {
+        width: 100%; /* Faz o container ocupar toda a largura */
+    }
+    .container h1 {
+        font-size: 18px;
+    }
+    label {
+        font-size: 13px;
+    }
+}
