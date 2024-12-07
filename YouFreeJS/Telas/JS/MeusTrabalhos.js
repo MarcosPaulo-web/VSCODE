@@ -69,8 +69,10 @@ function openModal(title, description, local, pagamento, data) {
     document.getElementById("modal").style.display = "block";
 }
 function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-theme'); // Corrigido para usar 'dark-theme'
+    const sidebar = document.querySelector('.sidebar');
 }
+
 function closeModal() {
     // Fecha o modal
     document.getElementById("modal").style.display = "none";
