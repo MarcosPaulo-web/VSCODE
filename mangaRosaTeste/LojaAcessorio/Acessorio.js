@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function carregarProdutos() {
     try {
-        const response = await fetch(`http://localhost:8080/produto`); // Aguarda a resposta da requisição
+        const response = await fetch(`https://api.mercadolibre.com/iphone`); // Aguarda a resposta da requisição
         if (!response.ok) {
             throw new Error(`Erro ao buscar produtos: ${response.status}`);
         }
