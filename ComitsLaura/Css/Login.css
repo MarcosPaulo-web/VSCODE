@@ -69,6 +69,7 @@ input {
     color: var(--secoundary_color)!important;
     text-decoration: none !important;
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    width: 25%;
+    margin-left: 75%;
+
 }
