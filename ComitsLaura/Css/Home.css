@@ -1,0 +1,67 @@
+:root {
+    --primary_color: #80cab6;
+    --secoundary_color: #00796F;
+    --third_color: #e2f3ee;
+    --text_color: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+body{
+    background-color: var(--primary_color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+main{
+    min-height: 87vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+#inputPesquisa{
+    width: 50%;
+    margin-top: 25px;
+}
+.perfilClose {
+    position: fixed; /* Mantém a div sobreposta ao conteúdo */
+    bottom: 0;/* precisa para ficar abaixo */
+    left: 50%;/* precisa para ficar centrado */
+    transform: translateX(-50%) translateY(85%); /* Inicialmente oculta abaixo */
+    width: 95%;
+    height: 87vh; /* Ajuste para um tamanho menor que a tela */
+    max-height: 1000px; /* Garante que não fique muito grande */
+    background-color: var(--secoundary_color);
+    border-radius: 30px;
+    transition: transform 0.4s ease-in-out;
+    z-index: 1000; /* Mantém acima dos outros elementos */
+}
+
+.perfilOpen {
+    transform: translateX(-50%) translateY(-5vh); /* Move para cima, quase cobrindo o <main> */
+}
+
+.buttonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnPerfil{
+    position: relative;
+    top: -45px;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+}
