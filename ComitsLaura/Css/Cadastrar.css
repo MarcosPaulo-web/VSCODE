@@ -1,0 +1,85 @@
+:root {
+    --primary_color: #80cab6;
+    --secoundary_color: #00796F;
+    --third_color: #e2f3ee;
+    --text_color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--primary_color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: var(--third_color);
+    padding: 5%;
+    max-width: 900px;
+    border-radius: 10px;
+    padding-inline: 150px;
+}
+
+.inserts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+button {
+    background-color: var(--primary_color) !important;
+    color: var(--text_color) !important;
+    font-size: 20px !important;
+}
+
+button:hover {
+    background-color: var(--secoundary_color) !important;
+    border: none;
+}
+
+input {
+    border-color: var(--primary_color) !important;
+    border-radius: 15px;
+    
+}
+
+.tel_cpf_inputs {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+#cpf,
+#phone {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+#cpf,
+#phone input {
+    width: 90%;
+    border-radius: 10px;
+}
