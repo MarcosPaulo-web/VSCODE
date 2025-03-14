@@ -21,6 +21,17 @@ body {
     min-height: 100vh;
 }
 
+.Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 100px;
+    width: auto;
+}
+
 .container {
     background-color: var(--third_color);
     padding: 5%;

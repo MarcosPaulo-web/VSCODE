@@ -22,13 +22,17 @@ body {
     overflow-y: hidden;
 }
 
+header{
+    width: 100%;
+}
+
 main {
     min-height: 87vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: baseline;
-
+    background-color: var(--primary_color)!important;
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
     /* 1 totalmente visivel -- 0 invisivel */
@@ -59,7 +63,7 @@ main {
     /* Garante que não fique muito grande */
     background-color: var(--secoundary_color);
     border-radius: 30px;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;/* como exatamente funciona  */
     z-index: 1000;
     /* Mantém acima dos outros elementos */
 }
