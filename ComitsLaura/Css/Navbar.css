@@ -22,7 +22,16 @@ img{
     max-height: 50px;
 }
 
-#inputShearch{
+#inputSearch{
     width: 500px;
     border: 1px solid var(--secoundary_color)!important;
+    border-right: none !important;
+    background-color: var(--third_color);
+}
+
+#basic-addon2{
+    border-radius: 0px 25px 25px 1px;
+    border: 1px solid var(--secoundary_color)!important;
+    border-left: none!important;
+    background-color: var(--third_color);
 }

@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: var(--primary_color);
+    background-color: var(--third_color);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -32,7 +32,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    background-color: var(--primary_color)!important;
+    background-color: var(--third_color)!important;
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
     /* 1 totalmente visivel -- 0 invisivel */

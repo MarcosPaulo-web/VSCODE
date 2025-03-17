@@ -16,6 +16,7 @@ function buttonPerfil() {
         // Se estiver fechado, adiciona a classe para abrir o container 
         perfilDiv.classList.add("perfilOpen");
         main.classList.add("main_Ofuscado");
+
     }
 }
 
