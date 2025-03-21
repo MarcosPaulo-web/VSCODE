@@ -2,23 +2,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     await carregarNavbar()
 });
 
-function buttonPerfil() {
-    // Seleciona o elemento da div que contém o perfil
-    let perfilDiv = document.querySelector(".perfilClose");
-    let main = document.querySelector(".main");
+document.addEventListener("DOMContentLoaded", () => {
+    const perfil = document.querySelector('.perfilClose');
+    const overlay = document.querySelector('.blurOff');
+    const btnPerfil = document.getElementById('btnPerfil');
 
-    // Verifica se a classe 'perfilOpen' já está presente
-    if (perfilDiv.classList.contains("perfilOpen")) {
-        // Se já estiver aberto, remove a classe para fechar O Container
-        perfilDiv.classList.remove("perfilOpen");
-        main.classList.remove("main_Ofuscado")
-    } else {
-        // Se estiver fechado, adiciona a classe para abrir o container 
-        perfilDiv.classList.add("perfilOpen");
-        main.classList.add("main_Ofuscado");
+    btnPerfil.addEventListener('click', () => {
+        perfil.classList.toggle('perfilOpen'); // Abre/fecha o perfil
+        overlay.classList.toggle('blurOn'); // Ativa/desativa o blur no fundo
+    });
+});
 
-    }
-}
 
 
 async function carregarNavbar() {

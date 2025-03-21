@@ -87,3 +87,21 @@ main {
     width: 100px;
     border-radius: 100%;
 }
+
+.blurOff {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px); /* Aplica o desfoque */
+    z-index: 999; /* Mantém acima do conteúdo, mas abaixo do perfil */
+    opacity: 0; /* Começa invisível */
+    pointer-events: none; /* Não interfere nos cliques */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.blurOn {
+    opacity: 1; /* Ativa o efeito de blur */
+    pointer-events: all; /* Agora pode capturar cliques */
+}
