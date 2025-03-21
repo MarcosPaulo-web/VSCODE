@@ -35,6 +35,12 @@ height: 100%;
     background-color: var(--third_color);
 }
 
+#inputSearch:focus {
+    box-shadow: 0 0 10px var(--secoundary_color); /* Sombra azul quando em foco */
+    border-color: var(--primary_color); /* Opcional: altera a cor da borda quando em foco */
+}
+
+
 #basic-addon2{
     border-radius: 0px 8px 8px 1px;
     border: 1px solid var(--secoundary_color)!important;
@@ -59,6 +65,8 @@ height: 100%;
     background-color: var(--third_color);
     transform: scale(1.05);
     transition: all ease-in 0.1s;
+    border: solid 2px  var(--primary_color);
+    border-radius: 5px;
 }
 
 .nav-link.dropdown-toggle::before{
