@@ -22,16 +22,45 @@ img{
     max-height: 50px;
 }
 
+#navbarDropdown{
+font-size: 2rem;
+width: 100%;
+height: 100%;
+}
+
 #inputSearch{
-    width: 500px;
+    width: 800px;
     border: 1px solid var(--secoundary_color)!important;
     border-right: none !important;
     background-color: var(--third_color);
 }
 
 #basic-addon2{
-    border-radius: 0px 25px 25px 1px;
+    border-radius: 0px 8px 8px 1px;
     border: 1px solid var(--secoundary_color)!important;
     border-left: none!important;
     background-color: var(--third_color);
+}
+
+#inputSearch,#basic-addon2{
+    height: 50px;
+    margin-top: 15px;
+}
+
+/* css do dropdown */
+.dropdown-menu{/* da base inteira*/
+    background-color: var(--primary_color);
+    border-color: black;
+    transform: translatey(90%);
+    width:300px ;
+}
+
+.dropdown-item:hover{
+    background-color: var(--third_color);
+    transform: scale(1.05);
+    transition: all ease-in 0.1s;
+}
+
+.nav-link.dropdown-toggle::before{
+    content: none;
 }

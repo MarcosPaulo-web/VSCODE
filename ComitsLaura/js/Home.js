@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
+// toogle = se o nome estiver presente remove, se não o adiciona
 
 async function carregarNavbar() {
     try {
