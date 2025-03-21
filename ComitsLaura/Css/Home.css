@@ -32,20 +32,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    background-color: var(--third_color)!important;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    /* 1 totalmente visivel -- 0 invisivel */
 }
 
-.main_Ofuscado {
-    opacity: 0.3;
-}
-
-#inputPesquisa {
-    width: 50%;
-    margin-top: 25px;
-}
+/* apartir disto é para o funcionamento do perfil */
 
 .perfilClose {
     position: fixed;
