@@ -109,7 +109,9 @@ main {
     pointer-events: all;
     /* Agora pode capturar cliques */
 }
-
+.container{
+    margin-top: 50px;
+}
 .livros {
     width: 100%;
     grid-template-rows: flex;
