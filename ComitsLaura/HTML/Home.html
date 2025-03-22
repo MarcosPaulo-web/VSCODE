@@ -8,6 +8,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Css/Navbar.css">
     <link rel="stylesheet" href="../Css/Home.css">
+    <link rel="stylesheet" href="../Css/BookCards.css">
     <title>Home Page</title>
 </head>
 
@@ -18,12 +19,37 @@
     </header>
 
 
+<main>
+<div class="livros">
 
-    <div class="perfilClose">
-        <div class="buttonContainer">
-            <button type="button" class="btn btn-success" id="btnPerfil" onclick="buttonPerfil()">My profile</button>
+    <div class="container">
+        <div class="title">
+            <h1>Suspense</h1>
         </div>
+        <div class="allBooks"></div>
     </div>
+
+    <div class="container">
+        <div class="title">
+            <h1>Romance</h1>
+        </div>
+
+        <div class="allBooks"></div>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h1>Ação</h1>
+        </div>
+        <div class="allBooks"></div>
+    </div>
+</div>
+
+</main>
+<div class="perfilClose">
+    <div class="buttonContainer">
+        <button type="button" class="btn btn-success" id="btnPerfil" onclick="buttonPerfil()">My profile</button>
+    </div>
+</div>
 </body>
 
 </html>

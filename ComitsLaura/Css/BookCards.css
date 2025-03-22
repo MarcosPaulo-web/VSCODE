@@ -1,0 +1,50 @@
+
+.card {
+    width: 450px;
+    min-width: 400px;
+    max-width: 450px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    border: solid black 2px;
+    border-radius: 15px; 
+    background-color: var(--primary_color);
+    
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-img-top{
+    max-width: 100px;
+    width: 100%;
+    margin-right: 2%;
+}
+.card-title{
+    border-bottom: solid  #00796F ;
+    font-size: 2.5rem;
+}
+
+#price-books{
+    font-size: 1.5rem;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+}
+.card-footer-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-button-container{
+display: flex;
+align-items: center;
+justify-content: center;
+}
