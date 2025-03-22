@@ -12,10 +12,15 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#navbar{
-    background-color: var(--third_color)!important;
-    border-bottom: 1px solid var(--secoundary_color)!important;
+#navbar {
+    position: fixed;    /* Fixa a navbar no topo */
+    top: 0;             /* A navbar ficará no topo */
+    left: 0;            /* Alinha no lado esquerdo da página */
+    width: 100%;        /* A navbar ocupará toda a largura da tela */
+    background-color: var(--third_color) !important;
+    border-bottom: 1px solid var(--secoundary_color) !important;
     height: 75px;
+    z-index: 999;       /* Garante que a navbar fique acima de outros elementos */
 }
 
 #logo{
