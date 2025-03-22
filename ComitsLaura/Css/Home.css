@@ -129,6 +129,21 @@ main {
 
 }
 
+body::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+    border: solid 1px var(--secoundary_color);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--primary_color);
+    height: 5px;
+    border-radius: 25px;
+}
+
 .allBooks::-webkit-scrollbar{
     background-color: transparent;
 }
