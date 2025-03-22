@@ -120,6 +120,13 @@ main {
     align-items: center;
     
 }
+.title {
+    display: flex;
+}
+.title h1{
+   border-bottom: solid var(--secoundary_color);
+}
+
 .allBooks {
     display: flex;
     flex-direction: row;
