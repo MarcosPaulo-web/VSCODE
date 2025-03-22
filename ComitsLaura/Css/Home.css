@@ -125,6 +125,7 @@ main {
 }
 .title h1{
    border-bottom: solid var(--secoundary_color);
+   font-family:'Times New Roman', Times, serif 
 }
 
 .allBooks {
