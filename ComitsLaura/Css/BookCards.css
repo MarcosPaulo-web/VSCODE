@@ -1,3 +1,9 @@
+:root {
+    --primary_color: #80cab6;
+    --secoundary_color: #00796F;
+    --third_color: #e2f3ee;
+    --text_color: black;
+}
 
 .card {
     width: 450px;
@@ -10,6 +16,10 @@
     border-radius: 15px; 
     background-color: var(--primary_color);
     cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0px 2px 4px 2px var(--secoundary_color);
 }
 
 .card-header{
