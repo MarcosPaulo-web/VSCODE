@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+
 :root {
     --primary_color: #80cab6;
     --secoundary_color: #00796F;
@@ -9,8 +11,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    font-family: "Gabriela", serif;
 }
 
 body {
