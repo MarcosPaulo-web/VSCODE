@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Major+Mono+Display&display=swap');
 
 :root {
     --primary_color: #80cab6;
@@ -11,7 +11,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: "Gabriela", serif;
+    font-family: "Lancelot", serif;
 }
 
 body {
