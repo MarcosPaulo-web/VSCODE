@@ -13,7 +13,7 @@ data2.append(int(input('Dia :')))
 data2.append(int(input('Mês :')))
 data2.append(int(input('Ano :')))
 
-#verifica o ano
+#verifica as datas em sequencia, o que acontecer primeiro já avisa
 if data1[2] < data2[2]:
     print('Data 1 Aconteceu primeiro por causa do ano')
 elif data1[2] > data2[2]:
