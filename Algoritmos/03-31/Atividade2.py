@@ -1,0 +1,1 @@
+# 1-Escrva um programa que lê 3 numeros inteiros e os mostre em ordem crescente
