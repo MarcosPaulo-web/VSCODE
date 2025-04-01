@@ -3,7 +3,7 @@
 
 data1 = []
 data2 = []
-
+print('')
 print('Data 1 :')               #Na lista
 data1.append(int(input('Dia :')))#0
 data1.append(int(input('Mês :')))#1
@@ -34,3 +34,5 @@ elif data1[0] < data2[0]:
     print('Data 1 Aconteceu primeiro por causa do dia')
 elif data1[0] > data2[0]:
     print('Data 2 Aconteceu primeiro por causa do dia')
+else:
+    print('Datas iguais')
