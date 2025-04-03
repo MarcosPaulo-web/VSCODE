@@ -17,7 +17,7 @@ def tipoTriangulo(x,y,z):
      print('É um triâmgulo Equilátero')
     elif x == y or x == z or y == z:
        print('É um triângulo Isósceles')
-    elif x != y or x != z or z!=y:
+    elif x != y and x != z and z!=y:
        print('É um triângulo Escaloeno')
 
 if x+y>z or z+y>x or z+x>y:
