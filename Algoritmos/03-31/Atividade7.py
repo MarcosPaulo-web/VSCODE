@@ -17,3 +17,9 @@ if mes == currentDate.month:
     print('mês referente a seu aniversário')
 else:
     print('não é o mês do seu aniversário')
+
+
+idade = (currentDate.year - ano)
+
+print("Idade :{} ".format(idade))
+

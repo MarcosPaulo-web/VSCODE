@@ -36,3 +36,7 @@ elif data1[0] > data2[0]:
     print('Data 2 Aconteceu primeiro por causa do dia')
 else:
     print('Datas iguais')
+    print('')
+    print('')
+
+print('Data 1 :{}, Data 2 {}'.format(data1,data2))

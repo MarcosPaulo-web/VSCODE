@@ -1,7 +1,8 @@
 #- Dada uma letra, mostre se essa letra é ou não uma vogal (pode considerar
 #apenas letras minúsculas).
 
-letra = input('Digite 1 letra :')
+letra = input('Digite 1 letra :').lower()  
+
 if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u':
  print( 'É uma vogal')
 else:
