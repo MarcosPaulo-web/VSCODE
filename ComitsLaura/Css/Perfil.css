@@ -1,0 +1,26 @@
+:root {
+    --primary_color: #80cab6;
+    --secoundary_color: #00796F;
+    --third_color: #e2f3ee;
+    --text_color: black;
+}
+
+.nome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid var(--secoundary_color)!important;
+}
+
+.notas{
+    background-color: var(--secoundary_color);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 3px;
+    border-radius: 5px;
+    gap: 25px;
+    position:absolute ;
+    top:140px
+}

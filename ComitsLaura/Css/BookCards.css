@@ -1,9 +1,3 @@
-:root {
-    --primary_color: #80cab6;
-    --secoundary_color: #00796F;
-    --third_color: #e2f3ee;
-    --text_color: black;
-}
 
 .card {
     width: 450px;
